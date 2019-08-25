@@ -1,0 +1,107 @@
+{
+  "Main": {
+    "_idioma": "Language",
+    "_filtro": "Filter",
+    "_inicio": "Home",
+    "_addRow": "Add row",
+    "_editRow": "Edit row",
+    "_refreshTable": "refresh data in table",
+    "_exportCSV": "Export data in comma separated values format",
+    "_itemsPerPageLabel": "Rows per Page",
+    "_alerta": "Crisis Alert"
+  },
+  "Monitor": {
+    "_titulo": "Monitor"
+  },
+  "INVCOAreas": {
+    "INVCOAreaId": "Id",
+    "INVCOAreaIdError": "Id invalid",
+    "INVCOAreaDescripcion": "Description",
+    "INVCOAreaDescripcionError": "Description invalid",
+    "INVCOAreaEstado": "Status",
+    "_INVCOAreaEstado": {
+      "Activo": "Enabled",
+      "Cancelado": "Cancelled",
+      "Anulado": "Void"
+    },
+    "INVCOAreaEstadoError": "Status invalid",
+    "_guardar": "Save and Continue",
+    "_cancelar": "Cancel",
+    "_titulo": "Areas"
+  },
+  "INVCOPersonas": {
+    "INVCOPersonaId": "Id",
+    "INVCOPersonaIdError": "Id invalid",
+    "INVCOPersonaApellidos": "Surnames",
+    "INVCOPersonaApellidosError": "Surnames invalid",
+    "INVCOPersonaNombre": "Name",
+    "INVCOPersonaNombreError": "Name invalid",
+    "INVCOPersonaDireccion": "Address",
+    "INVCOPersonaDireccionError": "Address invalid",
+    "GOVCOPaisId": "City",
+    "GOVCOPaisIdError": "City invalid",
+    "GOVCODepartamentoId": "City",
+    "GOVCODepartamentoIdError": "City invalid",
+    "GOVCOCiudadId": "City",
+    "GOVCOCiudadIdError": "City invalid",
+    "GOVCOCiudadNombre": "City",
+    "GOVCOCiudadNombreError": "Ciity invalid",
+    "INVCOPersonaTelefono": "Phone",
+    "INVCOPersonaTelefonoError": "Phone invalid",
+    "INVCOPersonaEMail": "E Mail",
+    "INVCOPersonaEMailError": "E Mail invalid",
+    "INVCOAreaId": "Area",
+    "INVCOAreaIdError": "Area invalid",
+    "INVCOAreaDescripcion": "Area",
+    "INVCOAreaDescripcionError": "Area invalid",
+    "INVCOPersonaEstado": "Status",
+    "_INVCOPersonaEstado": {
+      "Activo": "Enabled",
+      "Cancelado": "Cancelled",
+      "Anulado": "Void"
+    },
+    "INVCOPersonaEstadoError": "Status invalid",
+    "_guardar": "Save and Continue",
+    "_cancelar": "Cancel",
+    "_titulo": "People"
+  },
+  "INVCOBienes": {
+    "INVCOBienId": "Id",
+    "INVCOBienIdError": "Id invalid",
+    "INVCOBienNombre": "Name",
+    "INVCOBienNombreError": "Name invalid",
+    "INVCOBienDescripcion": "Description",
+    "INVCOBienDescripcionError": "Description invalid",
+    "INVCOBienTipo": "Type",
+    "_INVCOBienTipo": {
+      "Mueble": "movable",
+      "Inmueble": "immovable"
+    },
+    "INVCOBienTipoError": "Type invalid",
+    "INVCOBienSerial": "Serial",
+    "INVCOBienSerialError": "Serial invalid",
+    "INVCOBienValorCompra": "Purchase Value",
+    "INVCOBienValorCompraError": "Purchase value invalid",
+    "INVCOBienFechaCompra": "Purchase Date",
+    "INVCOBienFechaCompraError": "Purchase Date invalid",
+    "INVCOBienEstadoActual": "Actual Status",
+    "_INVCOBienEstadoActual": {
+      "Activo": "Enabled",
+      "Cancelado": "Cancelled",
+      "Entregado": "Delivered",
+      "Anulado": "Void"
+    },
+    "INVCOBienEstadoActualError": "Actual Status invalid",
+    "INVCOAreaId": "Area",
+    "INVCOAreaIdError": "Area invalid",
+    "INVCOAreaDescripcion": "Area",
+    "INVCOAreaDescripcionError": "Area invalid",
+    "INVCOPersonaId": "Name",
+    "INVCOPersonaIdError": "Name invalid",
+    "INVCOPersonaNombreCompleto": "Name",
+    "INVCOPersonaNombreCompletoError": "Name invalid",
+    "_guardar": "Save and Continue",
+    "_cancelar": "Cancel",
+    "_titulo": "Assets"
+  }
+}

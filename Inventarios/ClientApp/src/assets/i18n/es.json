@@ -1,0 +1,107 @@
+{
+  "Main": {
+    "_idioma": "Idioma",
+    "_filtro": "Filtro",
+    "_inicio": "Inicio",
+    "_addRow": "Agregar fila",
+    "_editRow": "Modificar fila",
+    "_refreshTable": "Agregar fila",
+    "_exportCSV": "Exportar datos en formato separados por coma",
+    "_itemsPerPageLabel": "Filas por pagina",
+    "_alerta": "Alerta por Crisis"
+  },
+  "Monitor": {
+    "_titulo": "Monitor"
+  },
+  "INVCOAreas": {
+    "INVCOAreaId": "Id",
+    "INVCOAreaIdError": "Id invalido",
+    "INVCOAreaDescripcion": "Descripcion",
+    "INVCOAreaDescripcionError": "Descripcion invalido",
+    "INVCOAreaEstado": "Estado",
+    "_INVCOAreaEstado": {
+      "Activo": "Activo",
+      "Cancelado": "Cancelado",
+      "Anulado": "Anulado"
+    },
+    "INVCOAreaEstadoError": "Estado invalido",
+    "_guardar": "Salvar y Seguir",
+    "_cancelar": "Cancelar",
+    "_titulo": "Areas"
+  },
+  "INVCOPersonas": {
+    "INVCOPersonaId": "Id",
+    "INVCOPersonaIdError": "Id invalido",
+    "INVCOPersonaApellidos": "Apellidos",
+    "INVCOPersonaApellidosError": "Apellidos invalido",
+    "INVCOPersonaNombre": "Nombre",
+    "INVCOPersonaNombreError": "Nombre invalido",
+    "INVCOPersonaDireccion": "Direccion",
+    "INVCOPersonaDireccionError": "Direccion invalido",
+    "GOVCOPaisId": "Ciudad",
+    "GOVCOPaisIdError": "Ciudad invalido",
+    "GOVCODepartamentoId": "Ciudad",
+    "GOVCODepartamentoIdError": "Ciudad invalido",
+    "GOVCOCiudadId": "Ciudad",
+    "GOVCOCiudadIdError": "Ciudad invalido",
+    "GOVCOCiudadNombre": "Ciudad",
+    "GOVCOCiudadNombreError": "Ciudad invalido",
+    "INVCOPersonaTelefono": "Telefono",
+    "INVCOPersonaTelefonoError": "Telefono invalido",
+    "INVCOPersonaEMail": "E Mail",
+    "INVCOPersonaEMailError": "E Mail invalido",
+    "INVCOAreaId": "Area",
+    "INVCOAreaIdError": "Area invalido",
+    "INVCOAreaDescripcion": "Area",
+    "INVCOAreaDescripcionError": "Area invalido",
+    "INVCOPersonaEstado": "Estado",
+    "_INVCOPersonaEstado": {
+      "Activo": "Activo",
+      "Cancelado": "Cancelado",
+      "Anulado": "Anulado"
+    },
+    "INVCOPersonaEstadoError": "Estado invalido",
+    "_guardar": "Salvar y Seguir",
+    "_cancelar": "Cancelar",
+    "_titulo": "Personas"
+  },
+  "INVCOBienes": {
+    "INVCOBienId": "Id",
+    "INVCOBienIdError": "Id invalido",
+    "INVCOBienNombre": "Nombre",
+    "INVCOBienNombreError": "Nombre invalido",
+    "INVCOBienDescripcion": "Descripcion",
+    "INVCOBienDescripcionError": "Descripcion invalido",
+    "INVCOBienTipo": "Tipo",
+    "_INVCOBienTipo": {
+      "Mueble": "Mueble",
+      "Inmueble": "Inmueble"
+    },
+    "INVCOBienTipoError": "Tipo invalido",
+    "INVCOBienSerial": "Serial",
+    "INVCOBienSerialError": "Serial invalido",
+    "INVCOBienValorCompra": "Valor Compra",
+    "INVCOBienValorCompraError": "Valor Compra invalido",
+    "INVCOBienFechaCompra": "Fecha Compra",
+    "INVCOBienFechaCompraError": "Fecha Compra invalido",
+    "INVCOBienEstadoActual": "Estado Actual",
+    "_INVCOBienEstadoActual": {
+      "Activo": "Activo",
+      "Cancelado": "Cancelado",
+      "Entregado": "Entregado",
+      "Anulado": "Anulado"
+    },
+    "INVCOBienEstadoActualError": "Estado Actual invalido",
+    "INVCOAreaId": "Area",
+    "INVCOAreaIdError": "Area invalido",
+    "INVCOAreaDescripcion": "Area",
+    "INVCOAreaDescripcionError": "Area invalido",
+    "INVCOPersonaId": "Nombre",
+    "INVCOPersonaIdError": "Nombre invalido",
+    "INVCOPersonaNombreCompleto": "Nombre",
+    "INVCOPersonaNombreCompletoError": "Nombre invalido",
+    "_guardar": "Salvar y Seguir",
+    "_cancelar": "Cancelar",
+    "_titulo": "Bienes"
+  }
+}

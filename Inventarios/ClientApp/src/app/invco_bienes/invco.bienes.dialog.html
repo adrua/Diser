@@ -1,0 +1,146 @@
+currencyalor<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ 'INVCOBienes._titulo' | translate }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="INVCO_BienesForm" (ngSubmit)="onSubmit(INVCO_BienesForm.value)" autocomplete="off">
+      <div class="dialog-content">
+        <div class="row">
+          <div class="col-sm-12 col-xs-12" style="display: none;">
+            <mat-form-field>
+              <input matInput type="number" readonly
+                     formControlName="invcoBienId"
+                     placeholder="{{ 'INVCOBienes.INVCOBienId' | translate }}!" />
+            </mat-form-field>
+            <mat-error *ngIf="INVCO_BienesForm.controls.invcoBienId.invalid && INVCO_BienesForm.controls.invcoBienId.touched">{{ "INVCOBienes.INVCOBienIdError" | translate }}</mat-error>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-xs-12">
+            <mat-form-field style="width: 100%">
+              <input matInput type="text"
+                     formControlName="invcoBienNombre"
+                     placeholder="{{ 'INVCOBienes.INVCOBienNombre' | translate }}:" />
+            </mat-form-field>
+            <mat-error *ngIf="INVCO_BienesForm.controls.invcoBienNombre.invalid && INVCO_BienesForm.controls.invcoBienNombre.touched">{{ "INVCOBienes.INVCOBienNombreError" | translate }}</mat-error>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-xs-12">
+            <mat-form-field style="width: 100%">
+              <input matInput type="text"
+                     formControlName="invcoBienDescripcion"
+                     placeholder="{{ 'INVCOBienes.INVCOBienDescripcion' | translate }}:" />
+            </mat-form-field>
+            <mat-error *ngIf="INVCO_BienesForm.controls.invcoBienDescripcion.invalid && INVCO_BienesForm.controls.invcoBienDescripcion.touched">{{ "INVCOBienes.INVCOBienDescripcionError" | translate }}</mat-error>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-xs-12">
+            <label>{{ "INVCOBienes.INVCOBienTipo" | translate }}:</label>
+            <mat-radio-group formControlName="invcoBienTipo">
+              <mat-radio-button value="MB" selected="true">{{ "INVCOBienes._INVCOBienTipo.Mueble" | translate }}</mat-radio-button>
+              <mat-radio-button value="IM">{{ "INVCOBienes._INVCOBienTipo.Inmueble" | translate }}</mat-radio-button>
+            </mat-radio-group>
+            <mat-error *ngIf="INVCO_BienesForm.controls.invcoBienTipo.invalid && INVCO_BienesForm.controls.invcoBienTipo.touched">{{ "INVCOBienes.INVCOBienTipoError" | translate }}</mat-error>
+          </div>
+          <div class="col-sm-6 col-xs-12">
+            <mat-form-field>
+              <input matInput type="text"
+                     formControlName="invcoBienSerial"
+                     placeholder="{{ 'INVCOBienes.INVCOBienSerial' | translate }}:" />
+            </mat-form-field>
+            <mat-error *ngIf="INVCO_BienesForm.controls.invcoBienSerial.invalid && INVCO_BienesForm.controls.invcoBienSerial.touched">{{ "INVCOBienes.INVCOBienSerialError" | translate }}</mat-error>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-xs-12">
+            <mat-form-field>
+              <input matInput type="number"
+                     formControlName="invcoBienValorCompra"
+                     placeholder="{{ 'INVCOBienes.INVCOBienValorCompra' | translate }}:" />
+            </mat-form-field>
+            <mat-error *ngIf="INVCO_BienesForm.controls.invcoBienValorCompra.invalid && INVCO_BienesForm.controls.invcoBienValorCompra.touched">{{ "INVCOBienes.INVCOBienValorCompraError" | translate }}</mat-error>
+          </div>
+          <div class="col-sm-6 col-xs-12">
+            <mat-form-field>
+              <input matInput [matDatepicker]="myDatepickerINVCOBienFechaCompra" displayFormat="MMM DD/YYYY"
+                     formControlName="invcoBienFechaCompra"
+                     placeholder="{{ 'INVCOBienes.INVCOBienFechaCompra' | translate }}:" />
+              <mat-datepicker-toggle matSuffix [for]="myDatepickerINVCOBienFechaCompra"></mat-datepicker-toggle>
+              <mat-datepicker #myDatepickerINVCOBienFechaCompra></mat-datepicker>
+            </mat-form-field>
+            <mat-error *ngIf="INVCO_BienesForm.controls.invcoBienFechaCompra.invalid && INVCO_BienesForm.controls.invcoBienFechaCompra.touched">{{ "INVCOBienes.INVCOBienFechaCompraError" | translate }}</mat-error>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-xs-12">
+            <label>{{ "INVCOBienes.INVCOBienEstadoActual" | translate }}:</label>
+            <mat-radio-group formControlName="invcoBienEstadoActual">
+              <mat-radio-button value="AC" selected="true">{{ "INVCOBienes._INVCOBienEstadoActual.Activo" | translate }}</mat-radio-button>
+              <mat-radio-button value="CN">{{ "INVCOBienes._INVCOBienEstadoActual.Cancelado" | translate }}</mat-radio-button>
+              <mat-radio-button value="EN">{{ "INVCOBienes._INVCOBienEstadoActual.Entregado" | translate }}</mat-radio-button>
+              <mat-radio-button value="AN">{{ "INVCOBienes._INVCOBienEstadoActual.Anulado" | translate }}</mat-radio-button>
+            </mat-radio-group>
+            <mat-error *ngIf="INVCO_BienesForm.controls.invcoBienEstadoActual.invalid && INVCO_BienesForm.controls.invcoBienEstadoActual.touched">{{ "INVCOBienes.INVCOBienEstadoActualError" | translate }}</mat-error>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-xs-12" style="display: none;">
+            <mat-form-field>
+              <input matInput type="number" readonly
+                     formControlName="invcoAreaId"
+                     placeholder="{{ 'INVCOBienes.INVCOAreaId' | translate }}:" />
+            </mat-form-field>
+            <mat-error *ngIf="INVCO_BienesForm.controls.invcoAreaId.invalid && INVCO_BienesForm.controls.invcoAreaId.touched">{{ "INVCOBienes.INVCOAreaIdError" | translate }}</mat-error>
+          </div>
+          <div class="col-sm-12 col-xs-12">
+            <mat-form-field style="width: 100%">
+              <input matInput
+                     autocomplete="new-password"
+                     [matAutocomplete]="INVCOAreaDescripcion"
+                     [formControl]="INVCOAreaDescripcionCtrl"
+                     placeholder="{{ 'INVCOBienes.INVCOAreaDescripcion' | translate }}:" />
+            </mat-form-field>
+            <mat-autocomplete #INVCOAreaDescripcion="matAutocomplete">
+              <mat-option *ngFor="let opt of filteredINVCOAreaDescripcion" [value]="opt.label" (click)="onSelect_INVCOAreaDescripcion(opt);">
+                {{ opt.label }}
+              </mat-option>
+            </mat-autocomplete>
+            <mat-error *ngIf="INVCOAreaDescripcionCtrl.invalid && INVCOAreaDescripcionCtrl.touched">{{ "INVCOBienes.INVCOAreaDescripcionError" | translate }}</mat-error>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-xs-12" style="display: none;">
+            <mat-form-field>
+              <input matInput type="number" readonly
+                     formControlName="invcoPersonaId"
+                     placeholder="{{ 'INVCOBienes.INVCOPersonaId' | translate }}:" />
+            </mat-form-field>
+            <mat-error *ngIf="INVCO_BienesForm.controls.invcoPersonaId.invalid && INVCO_BienesForm.controls.invcoPersonaId.touched">{{ "INVCOBienes.INVCOPersonaIdError" | translate }}</mat-error>
+          </div>
+          <div class="col-sm-12 col-xs-12">
+            <mat-form-field style="width: 100%">
+              <input matInput
+                     autocomplete="new-password"
+                     [matAutocomplete]="INVCOPersonaNombreCompleto"
+                     [formControl]="INVCOPersonaNombreCompletoCtrl"
+                     placeholder="{{ 'INVCOBienes.INVCOPersonaNombreCompleto' | translate }}:" />
+            </mat-form-field>
+            <mat-autocomplete #INVCOPersonaNombreCompleto="matAutocomplete">
+              <mat-option *ngFor="let opt of filteredINVCOPersonaNombreCompleto" [value]="opt.label" (click)="onSelect_INVCOPersonaNombreCompleto(opt);">
+                {{ opt.label }}
+              </mat-option>
+            </mat-autocomplete>
+            <mat-error *ngIf="INVCOPersonaNombreCompletoCtrl.invalid && INVCOPersonaNombreCompletoCtrl.touched">{{ "INVCOBienes.INVCOPersonaNombreCompletoError" | translate }}</mat-error>
+          </div>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-spinner *ngIf="_proc" style="width: 15px; height:15px"></mat-spinner>
+    <button mat-button (click)="onSubmit(INVCO_BienesForm.value);" [disabled]="!INVCO_BienesForm.valid">{{ "INVCOBienes._guardar" | translate  }}</button>
+    <button mat-button mat-dialog-close>{{ "INVCOBienes._cancelar" | translate  }}</button>
+  </mat-card-actions>
+</mat-card>
