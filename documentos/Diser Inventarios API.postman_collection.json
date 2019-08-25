@@ -1,0 +1,1489 @@
+{
+	"info": {
+		"_postman_id": "e3bd8370-840f-42e7-bcab-c57acab5d14b",
+		"name": "Diser Inventarios API",
+		"description": "Inventarios ASP.NET Core Web API\n\nContact Support: \n{\n\nName : Adalberto Raul Rua Aguire\n\nEmail : adrua@hotmail.com\n\n}",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "INVCO Areas Data Services 27730 DISER",
+					"item": [
+						{
+							"name": "/api/INVCO_AreasDataServices_27730_DISER",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"compania\": \"<integer>\",\n    \"invcoAreaDescripcion\": \"<string>\",\n    \"invcoAreaEstado\": \"<string>\",\n    \"invcoAreaId\": \"<integer>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_AreasDataServices_27730_DISER",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_AreasDataServices_27730_DISER"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"compania\": \"<integer>\",\n    \"invcoAreaDescripcion\": \"<string>\",\n    \"invcoAreaEstado\": \"<string>\",\n    \"invcoAreaId\": \"<integer>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_AreasDataServices_27730_DISER",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_AreasDataServices_27730_DISER"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_AreasDataServices_27730_DISER",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"compania\": \"<integer>\",\n    \"invcoAreaDescripcion\": \"<string>\",\n    \"invcoAreaEstado\": \"<string>\",\n    \"invcoAreaId\": \"<integer>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_AreasDataServices_27730_DISER",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_AreasDataServices_27730_DISER"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"compania\": \"<integer>\",\n    \"invcoAreaDescripcion\": \"<string>\",\n    \"invcoAreaEstado\": \"<string>\",\n    \"invcoAreaId\": \"<integer>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_AreasDataServices_27730_DISER",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_AreasDataServices_27730_DISER"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_AreasDataServices_27730_DISER/Gets",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_AreasDataServices_27730_DISER/Gets?pageIndex=<integer>&pageSize=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_AreasDataServices_27730_DISER",
+										"Gets"
+									],
+									"query": [
+										{
+											"key": "pageIndex",
+											"value": "<integer>"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_AreasDataServices_27730_DISER/Gets?pageIndex=<integer>&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_AreasDataServices_27730_DISER",
+												"Gets"
+											],
+											"query": [
+												{
+													"key": "pageIndex",
+													"value": "<integer>"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_AreasDataServices_27730_DISER/Search",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_AreasDataServices_27730_DISER/Search?term=<string>&column=INVCOAreaDescripcion&pageIndex=<integer>&pageSize=10&sort=INVCOAreaDescripcion ASC",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_AreasDataServices_27730_DISER",
+										"Search"
+									],
+									"query": [
+										{
+											"key": "term",
+											"value": "<string>"
+										},
+										{
+											"key": "column",
+											"value": "INVCOAreaDescripcion"
+										},
+										{
+											"key": "pageIndex",
+											"value": "<integer>"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "sort",
+											"value": "INVCOAreaDescripcion ASC"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_AreasDataServices_27730_DISER/Search?term=<string>&column=INVCOAreaDescripcion&pageIndex=<integer>&pageSize=10&sort=INVCOAreaDescripcion ASC",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_AreasDataServices_27730_DISER",
+												"Search"
+											],
+											"query": [
+												{
+													"key": "term",
+													"value": "<string>"
+												},
+												{
+													"key": "column",
+													"value": "INVCOAreaDescripcion"
+												},
+												{
+													"key": "pageIndex",
+													"value": "<integer>"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "INVCOAreaDescripcion ASC"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_AreasDataServices_27730_DISER/:Compania/:INVCOAreaId",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_AreasDataServices_27730_DISER/:Compania/:INVCOAreaId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_AreasDataServices_27730_DISER",
+										":Compania",
+										":INVCOAreaId"
+									],
+									"variable": [
+										{
+											"key": "Compania",
+											"value": "<integer>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "INVCOAreaId",
+											"value": "<integer>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_AreasDataServices_27730_DISER/<integer>/<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_AreasDataServices_27730_DISER",
+												"<integer>",
+												"<integer>"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "INVCO Bienes Data Services 27750 DISER",
+					"item": [
+						{
+							"name": "/api/INVCO_BienesDataServices_27750_DISER",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"compania\": \"<integer>\",\n    \"invcoAreaId\": \"<integer>\",\n    \"invcoBienDescripcion\": \"<string>\",\n    \"invcoBienEstadoActual\": \"<string>\",\n    \"invcoBienFechaCompra\": \"<dateTime>\",\n    \"invcoBienId\": \"<integer>\",\n    \"invcoBienNombre\": \"<string>\",\n    \"invcoBienSerial\": \"<string>\",\n    \"invcoBienTipo\": \"<string>\",\n    \"invcoBienValorCompra\": \"<double>\",\n    \"invcoPersonaId\": \"<double>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_BienesDataServices_27750_DISER"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"compania\": \"<integer>\",\n    \"invcoAreaId\": \"<integer>\",\n    \"invcoBienDescripcion\": \"<string>\",\n    \"invcoBienEstadoActual\": \"<string>\",\n    \"invcoBienFechaCompra\": \"<dateTime>\",\n    \"invcoBienId\": \"<integer>\",\n    \"invcoBienNombre\": \"<string>\",\n    \"invcoBienSerial\": \"<string>\",\n    \"invcoBienTipo\": \"<string>\",\n    \"invcoBienValorCompra\": \"<double>\",\n    \"invcoPersonaId\": \"<double>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_BienesDataServices_27750_DISER"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_BienesDataServices_27750_DISER",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"compania\": \"<integer>\",\n    \"invcoAreaId\": \"<integer>\",\n    \"invcoBienDescripcion\": \"<string>\",\n    \"invcoBienEstadoActual\": \"<string>\",\n    \"invcoBienFechaCompra\": \"<dateTime>\",\n    \"invcoBienId\": \"<integer>\",\n    \"invcoBienNombre\": \"<string>\",\n    \"invcoBienSerial\": \"<string>\",\n    \"invcoBienTipo\": \"<string>\",\n    \"invcoBienValorCompra\": \"<double>\",\n    \"invcoPersonaId\": \"<double>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_BienesDataServices_27750_DISER"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"compania\": \"<integer>\",\n    \"invcoAreaId\": \"<integer>\",\n    \"invcoBienDescripcion\": \"<string>\",\n    \"invcoBienEstadoActual\": \"<string>\",\n    \"invcoBienFechaCompra\": \"<dateTime>\",\n    \"invcoBienId\": \"<integer>\",\n    \"invcoBienNombre\": \"<string>\",\n    \"invcoBienSerial\": \"<string>\",\n    \"invcoBienTipo\": \"<string>\",\n    \"invcoBienValorCompra\": \"<double>\",\n    \"invcoPersonaId\": \"<double>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_BienesDataServices_27750_DISER"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_BienesDataServices_27750_DISER/Gets",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER/Gets?pageIndex=<integer>&pageSize=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_BienesDataServices_27750_DISER",
+										"Gets"
+									],
+									"query": [
+										{
+											"key": "pageIndex",
+											"value": "<integer>"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER/Gets?pageIndex=<integer>&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_BienesDataServices_27750_DISER",
+												"Gets"
+											],
+											"query": [
+												{
+													"key": "pageIndex",
+													"value": "<integer>"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_BienesDataServices_27750_DISER/Search",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER/Search?term=<string>&column=INVCO_Bienes.INVCOBienNombre&pageIndex=<integer>&pageSize=10&sort=INVCO_Bienes.INVCOBienNombre ASC",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_BienesDataServices_27750_DISER",
+										"Search"
+									],
+									"query": [
+										{
+											"key": "term",
+											"value": "<string>"
+										},
+										{
+											"key": "column",
+											"value": "INVCO_Bienes.INVCOBienNombre"
+										},
+										{
+											"key": "pageIndex",
+											"value": "<integer>"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "sort",
+											"value": "INVCO_Bienes.INVCOBienNombre ASC"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER/Search?term=<string>&column=INVCO_Bienes.INVCOBienNombre&pageIndex=<integer>&pageSize=10&sort=INVCO_Bienes.INVCOBienNombre ASC",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_BienesDataServices_27750_DISER",
+												"Search"
+											],
+											"query": [
+												{
+													"key": "term",
+													"value": "<string>"
+												},
+												{
+													"key": "column",
+													"value": "INVCO_Bienes.INVCOBienNombre"
+												},
+												{
+													"key": "pageIndex",
+													"value": "<integer>"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "INVCO_Bienes.INVCOBienNombre ASC"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_BienesDataServices_27750_DISER/:Compania/:INVCOBienId",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER/:Compania/:INVCOBienId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_BienesDataServices_27750_DISER",
+										":Compania",
+										":INVCOBienId"
+									],
+									"variable": [
+										{
+											"key": "Compania",
+											"value": "<integer>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "INVCOBienId",
+											"value": "<integer>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER/<integer>/<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_BienesDataServices_27750_DISER",
+												"<integer>",
+												"<integer>"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_BienesDataServices_27750_DISER/INVCO_Areas",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER/INVCO_Areas?term=<string>&column=INVCOAREADESCRIPCION&pageSize=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_BienesDataServices_27750_DISER",
+										"INVCO_Areas"
+									],
+									"query": [
+										{
+											"key": "term",
+											"value": "<string>"
+										},
+										{
+											"key": "column",
+											"value": "INVCOAREADESCRIPCION"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER/INVCO_Areas?term=<string>&column=INVCOAREADESCRIPCION&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_BienesDataServices_27750_DISER",
+												"INVCO_Areas"
+											],
+											"query": [
+												{
+													"key": "term",
+													"value": "<string>"
+												},
+												{
+													"key": "column",
+													"value": "INVCOAREADESCRIPCION"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_BienesDataServices_27750_DISER/INVCO_Personas",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER/INVCO_Personas?term=<string>&column=INVCOPERSONANOMBRECOMPLETO&pageSize=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_BienesDataServices_27750_DISER",
+										"INVCO_Personas"
+									],
+									"query": [
+										{
+											"key": "term",
+											"value": "<string>"
+										},
+										{
+											"key": "column",
+											"value": "INVCOPERSONANOMBRECOMPLETO"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_BienesDataServices_27750_DISER/INVCO_Personas?term=<string>&column=INVCOPERSONANOMBRECOMPLETO&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_BienesDataServices_27750_DISER",
+												"INVCO_Personas"
+											],
+											"query": [
+												{
+													"key": "term",
+													"value": "<string>"
+												},
+												{
+													"key": "column",
+													"value": "INVCOPERSONANOMBRECOMPLETO"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "INVCO Personas Data Services 27740 DISER",
+					"item": [
+						{
+							"name": "/api/INVCO_PersonasDataServices_27740_DISER",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"compania\": \"<integer>\",\n    \"govcoCiudadId\": \"<string>\",\n    \"govcoDepartamentoId\": \"<string>\",\n    \"govcoPaisId\": \"<string>\",\n    \"invcoAreaId\": \"<integer>\",\n    \"invcoPersonaApellidos\": \"<string>\",\n    \"invcoPersonaDireccion\": \"<string>\",\n    \"invcoPersonaEMail\": \"<string>\",\n    \"invcoPersonaEstado\": \"<string>\",\n    \"invcoPersonaId\": \"<double>\",\n    \"invcoPersonaNombre\": \"<string>\",\n    \"invcoPersonaNombreCompleto\": \"<string>\",\n    \"invcoPersonaTelefono\": \"<string>\",\n    \"govcO_Ciudades_Comp\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_PersonasDataServices_27740_DISER"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"compania\": \"<integer>\",\n    \"govcoCiudadId\": \"<string>\",\n    \"govcoDepartamentoId\": \"<string>\",\n    \"govcoPaisId\": \"<string>\",\n    \"invcoAreaId\": \"<integer>\",\n    \"invcoPersonaApellidos\": \"<string>\",\n    \"invcoPersonaDireccion\": \"<string>\",\n    \"invcoPersonaEMail\": \"<string>\",\n    \"invcoPersonaEstado\": \"<string>\",\n    \"invcoPersonaId\": \"<double>\",\n    \"invcoPersonaNombre\": \"<string>\",\n    \"invcoPersonaNombreCompleto\": \"<string>\",\n    \"invcoPersonaTelefono\": \"<string>\",\n    \"govcO_Ciudades_Comp\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_PersonasDataServices_27740_DISER"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_PersonasDataServices_27740_DISER",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"compania\": \"<integer>\",\n    \"govcoCiudadId\": \"<string>\",\n    \"govcoDepartamentoId\": \"<string>\",\n    \"govcoPaisId\": \"<string>\",\n    \"invcoAreaId\": \"<integer>\",\n    \"invcoPersonaApellidos\": \"<string>\",\n    \"invcoPersonaDireccion\": \"<string>\",\n    \"invcoPersonaEMail\": \"<string>\",\n    \"invcoPersonaEstado\": \"<string>\",\n    \"invcoPersonaId\": \"<double>\",\n    \"invcoPersonaNombre\": \"<string>\",\n    \"invcoPersonaNombreCompleto\": \"<string>\",\n    \"invcoPersonaTelefono\": \"<string>\",\n    \"govcO_Ciudades_Comp\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_PersonasDataServices_27740_DISER"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"compania\": \"<integer>\",\n    \"govcoCiudadId\": \"<string>\",\n    \"govcoDepartamentoId\": \"<string>\",\n    \"govcoPaisId\": \"<string>\",\n    \"invcoAreaId\": \"<integer>\",\n    \"invcoPersonaApellidos\": \"<string>\",\n    \"invcoPersonaDireccion\": \"<string>\",\n    \"invcoPersonaEMail\": \"<string>\",\n    \"invcoPersonaEstado\": \"<string>\",\n    \"invcoPersonaId\": \"<double>\",\n    \"invcoPersonaNombre\": \"<string>\",\n    \"invcoPersonaNombreCompleto\": \"<string>\",\n    \"invcoPersonaTelefono\": \"<string>\",\n    \"govcO_Ciudades_Comp\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_PersonasDataServices_27740_DISER"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_PersonasDataServices_27740_DISER/Gets",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER/Gets?pageIndex=<integer>&pageSize=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_PersonasDataServices_27740_DISER",
+										"Gets"
+									],
+									"query": [
+										{
+											"key": "pageIndex",
+											"value": "<integer>"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER/Gets?pageIndex=<integer>&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_PersonasDataServices_27740_DISER",
+												"Gets"
+											],
+											"query": [
+												{
+													"key": "pageIndex",
+													"value": "<integer>"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_PersonasDataServices_27740_DISER/Search",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER/Search?term=<string>&column=INVCO_Personas.INVCOPersonaApellidos&pageIndex=<integer>&pageSize=10&sort=INVCO_Personas.INVCOPersonaApellidos ASC",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_PersonasDataServices_27740_DISER",
+										"Search"
+									],
+									"query": [
+										{
+											"key": "term",
+											"value": "<string>"
+										},
+										{
+											"key": "column",
+											"value": "INVCO_Personas.INVCOPersonaApellidos"
+										},
+										{
+											"key": "pageIndex",
+											"value": "<integer>"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "sort",
+											"value": "INVCO_Personas.INVCOPersonaApellidos ASC"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER/Search?term=<string>&column=INVCO_Personas.INVCOPersonaApellidos&pageIndex=<integer>&pageSize=10&sort=INVCO_Personas.INVCOPersonaApellidos ASC",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_PersonasDataServices_27740_DISER",
+												"Search"
+											],
+											"query": [
+												{
+													"key": "term",
+													"value": "<string>"
+												},
+												{
+													"key": "column",
+													"value": "INVCO_Personas.INVCOPersonaApellidos"
+												},
+												{
+													"key": "pageIndex",
+													"value": "<integer>"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "INVCO_Personas.INVCOPersonaApellidos ASC"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_PersonasDataServices_27740_DISER/:Compania/:INVCOPersonaId",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER/:Compania/:INVCOPersonaId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_PersonasDataServices_27740_DISER",
+										":Compania",
+										":INVCOPersonaId"
+									],
+									"variable": [
+										{
+											"key": "Compania",
+											"value": "<integer>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "INVCOPersonaId",
+											"value": "<double>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER/<integer>/<double>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_PersonasDataServices_27740_DISER",
+												"<integer>",
+												"<double>"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_PersonasDataServices_27740_DISER/GOVCO_Ciudades",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER/GOVCO_Ciudades?term=<string>&column=GOVCOCIUDADNOMBRE&pageSize=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_PersonasDataServices_27740_DISER",
+										"GOVCO_Ciudades"
+									],
+									"query": [
+										{
+											"key": "term",
+											"value": "<string>"
+										},
+										{
+											"key": "column",
+											"value": "GOVCOCIUDADNOMBRE"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER/GOVCO_Ciudades?term=<string>&column=GOVCOCIUDADNOMBRE&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_PersonasDataServices_27740_DISER",
+												"GOVCO_Ciudades"
+											],
+											"query": [
+												{
+													"key": "term",
+													"value": "<string>"
+												},
+												{
+													"key": "column",
+													"value": "GOVCOCIUDADNOMBRE"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/INVCO_PersonasDataServices_27740_DISER/INVCO_Areas",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER/INVCO_Areas?term=<string>&column=INVCOAREADESCRIPCION&pageSize=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"INVCO_PersonasDataServices_27740_DISER",
+										"INVCO_Areas"
+									],
+									"query": [
+										{
+											"key": "term",
+											"value": "<string>"
+										},
+										{
+											"key": "column",
+											"value": "INVCOAREADESCRIPCION"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/INVCO_PersonasDataServices_27740_DISER/INVCO_Areas?term=<string>&column=INVCOAREADESCRIPCION&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"INVCO_PersonasDataServices_27740_DISER",
+												"INVCO_Areas"
+											],
+											"query": [
+												{
+													"key": "term",
+													"value": "<string>"
+												},
+												{
+													"key": "column",
+													"value": "INVCOAREADESCRIPCION"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}

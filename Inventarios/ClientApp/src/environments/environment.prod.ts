@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  dataServiceUrl: "https://192.168.0.21:44370"
+  dataServiceUrl: "https://inventarios20190825012321.azurewebsites.net"
 };
