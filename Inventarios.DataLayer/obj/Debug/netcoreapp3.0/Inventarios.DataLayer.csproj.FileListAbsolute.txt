@@ -1,9 +1,8 @@
 C:\fuentes\disertics\Inventarios.DataLayer\bin\Debug\netcoreapp3.0\Inventarios.DataLayer.deps.json
 C:\fuentes\disertics\Inventarios.DataLayer\bin\Debug\netcoreapp3.0\Inventarios.DataLayer.dll
-C:\fuentes\disertics\Inventarios.DataLayer\obj\Debug\netcoreapp3.0\Inventarios.DataLayer.csprojAssemblyReference.cache
+C:\fuentes\disertics\Inventarios.DataLayer\bin\Debug\netcoreapp3.0\Inventarios.DataLayer.pdb
+C:\fuentes\disertics\Inventarios.DataLayer\obj\Debug\netcoreapp3.0\Inventarios.DataLayer.csproj.CoreCompileInputs.cache
 C:\fuentes\disertics\Inventarios.DataLayer\obj\Debug\netcoreapp3.0\Inventarios.DataLayer.AssemblyInfoInputs.cache
 C:\fuentes\disertics\Inventarios.DataLayer\obj\Debug\netcoreapp3.0\Inventarios.DataLayer.AssemblyInfo.cs
-C:\fuentes\disertics\Inventarios.DataLayer\bin\Debug\netcoreapp3.0\Inventarios.DataLayer.pdb
 C:\fuentes\disertics\Inventarios.DataLayer\obj\Debug\netcoreapp3.0\Inventarios.DataLayer.dll
 C:\fuentes\disertics\Inventarios.DataLayer\obj\Debug\netcoreapp3.0\Inventarios.DataLayer.pdb
-C:\fuentes\disertics\Inventarios.DataLayer\obj\Debug\netcoreapp3.0\Inventarios.DataLayer.csproj.CoreCompileInputs.cache

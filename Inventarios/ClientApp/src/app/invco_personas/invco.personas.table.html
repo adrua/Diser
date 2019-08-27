@@ -14,33 +14,38 @@
   </ng-container>
 
     <!-- Id! Column -->
-  <ng-container matColumnDef="invcoPersonaId">
-    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOPersonas.INVCOPersonaId" | translate }}!</mat-header-cell>
-    <mat-cell *matCellDef="let row">{{row.invcoPersonaId}}</mat-cell>
-    <mat-menu #menuINVCOPersonaId>
-      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
-        {{ "INVCOPersonas.INVCOPersonaId" | translate }}!
-      </div>
-      <div mat-menu-item mat-filter-item [disableRipple]="true">
-        <mat-form-field>
-          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoPersonaId">
-            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
+ <ng-container matColumnDef="invcoPersonaId">
+   <mat-header-cell *matHeaderCellDef disableClear>
+     <button mat-icon-button [matMenuTriggerFor]="menuINVCOPersonaId">
+       <mat-icon md-18>more_vert</mat-icon>
+     </button>
+     <span mat-sort-header>{{ "INVCOPersonas.INVCOPersonaId" | translate }}!</span>
+   </mat-header-cell>
+   <mat-cell *matCellDef="let row">{{row.invcoPersonaId}}</mat-cell>
+   <mat-menu #menuINVCOPersonaId >
+     <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+       {{ "INVCOPersonas.INVCOPersonaId" | translate }}!
+     </div>
+     <div mat-menu-item mat-filter-item [disableRipple]="true">
+       <mat-form-field>
+         <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoPersonaId">
+           <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+         </mat-select>
+       </mat-form-field>
+     </div>
 
-      <div mat-menu-item mat-filter-item [disableRipple]="true">
-        <mat-form-field>
-          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoPersonaId">
-        </mat-form-field>
-      </div>
+     <div mat-menu-item mat-filter-item [disableRipple]="true">
+       <mat-form-field>
+         <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoPersonaId">
+       </mat-form-field>
+     </div>
 
-      <div mat-menu-item mat-filter-item [disableRipple]="true">
-        <button mat-raised-button (click)="clearColumn('invcoPersonaId')">Clear</button>
-        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
-      </div>
-    </mat-menu>
-  </ng-container>
+     <div mat-menu-item mat-filter-item [disableRipple]="true">
+       <button mat-raised-button (click)="clearColumn('invcoPersonaId')">Clear</button>&nbsp;
+       <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+     </div>
+   </mat-menu>
+ </ng-container>
 
     <!-- Apellidos: Column -->
   <ng-container matColumnDef="invcoPersonaApellidos">
