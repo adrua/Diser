@@ -11,14 +11,20 @@
           <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
             <a class="nav-link text-dark" [routerLink]='["/"]'>Home</a>
           </li>
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-dark" [routerLink]='["/areas"]'>{{ 'INVCOAreas._titulo' | translate }}</a>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="!isLogin">
+            <a class="nav-link text-dark" [routerLink]='["/login"]'>{{ 'login._titulo' | translate }}</a>
           </li>
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-dark" [routerLink]='["/personas"]'>{{ 'INVCOPersonas._titulo' | translate }}</a>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="isLogin">
+            <a class="nav-link text-dark" [routerLink]='["/invco/ciuu"]'>{{ 'INVCOCiuu._titulo' | translate }}</a>
           </li>
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-dark" [routerLink]='["/bienes"]'>{{ 'INVCOBienes._titulo' | translate }}</a>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="isLogin">
+            <a class="nav-link text-dark" [routerLink]='["/invco/areas"]'>{{ 'INVCOAreas._titulo' | translate }}</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="isLogin"> 
+            <a class="nav-link text-dark" [routerLink]='["/invco/personas"]'>{{ 'INVCOPersonas._titulo' | translate }}</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="isLogin">
+            <a class="nav-link text-dark" [routerLink]='["/invco/bienes"]'>{{ 'INVCOBienes._titulo' | translate }}</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarIdioma" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

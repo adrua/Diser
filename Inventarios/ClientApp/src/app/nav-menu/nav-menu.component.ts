@@ -8,6 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavMenuComponent {
   isExpanded = false;
+  get isLogin(): boolean { return window["isLogin"] || false; }
 
   constructor(public translate: TranslateService) { }
 
@@ -22,4 +23,5 @@ export class NavMenuComponent {
   toggle() {
     this.isExpanded = !this.isExpanded;
   }
+
 }
