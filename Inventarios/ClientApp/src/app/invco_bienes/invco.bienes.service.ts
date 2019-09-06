@@ -8,15 +8,6 @@ import { environment } from '../../environments/environment';
 
 import { INVCO_BienesModel } from './invco.bienes.model';
 
-
-const httpOptions = {
-  params: null,
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json' // ,
-//    'Authorization': 'my-auth-token'
-  })
-};
-
 @Injectable({ providedIn: 'root' })
 export class INVCOBienesService {
     private INVCOBienesUrl = '';  // URL to web api
@@ -39,12 +30,19 @@ export class INVCOBienesService {
     }
 
     getINVCO_BienesList(
-                val: string,
+                filter: {
+                    value: any,
+                    condition: string,
+                    column: string
+                },
                 pageSize: number = 10,
                 pageIndex: number = 0,
                 sortExpr: string = ''): Observable<any> {
+                
         const params: any = {
-            term: val,
+            term: filter.value,
+            condition: filter.condition,
+            column: filter.column,
             pageSize: pageSize.toString(),
             pageIndex: pageIndex.toString()
         };
@@ -63,7 +61,7 @@ export class INVCOBienesService {
     }
 
     addINVCO_Bienes(row: INVCO_BienesModel): Observable<INVCO_BienesModel> {
-        return this.http.post<INVCO_BienesModel>(this.INVCOBienesUrl, row, httpOptions).pipe(
+        return this.http.post<INVCO_BienesModel>(this.INVCOBienesUrl, row).pipe(
             retry(3),
             tap((rrow: INVCO_BienesModel) => this.log(`added INVCO_Bienes w/ id=${rrow.invcoBienId}`)),
             catchError((error) => this.handleError('addINVCO_Bienes', error))
@@ -71,9 +69,8 @@ export class INVCOBienesService {
     }
 
     updateINVCO_Bienes(row: INVCO_BienesModel): Observable<INVCO_BienesModel> {
-        // httpOptions.headers = httpOptions.headers.set('Authorization', 'my-new-auth-token');
-
-        return this.http.put<INVCO_BienesModel>(this.INVCOBienesUrl, row, httpOptions).pipe(
+    
+        return this.http.put<INVCO_BienesModel>(this.INVCOBienesUrl, row).pipe(
             retry(3),
             tap(_ => this.log(`update INVCO_Bienes id=${row.invcoBienId}`)),
             catchError((error) => this.handleError('updateINVCO_Bienes', error))
@@ -91,7 +88,7 @@ export class INVCOBienesService {
     deleteINVCO_Bienes(row: INVCO_BienesModel): Observable<INVCO_BienesModel> {
         const sUrl = `${this.INVCOBienesUrl}/${row.compania}/${row.invcoBienId}`;
 
-        return this.http.delete(sUrl, httpOptions).pipe(
+        return this.http.delete(sUrl).pipe(
             retry(3),
             tap(_ => this.log(`filter INVCO_Bienes id=${row.invcoBienId}`)),
             catchError((error) => this.handleError('deleteINVCO_Bienes', error))
