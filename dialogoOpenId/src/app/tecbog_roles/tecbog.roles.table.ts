@@ -10,10 +10,10 @@ import { TECBOGRolesService } from './tecbog.roles.service';
 import { TECBOG_RolesModel } from './tecbog.roles.model';
 
 export const CONDITIONS_LIST = [
-  { value: "contains({0})", label: "Contains" },
-  { value: "!contains({0})", label: "Not Contains" },
-  { value: "==", label: "Is equal" },
-  { value: "!=", label: "Is not equal" }
+  { value: "like", label: "Contains" },
+  { value: "not like", label: "Not Contains" },
+  { value: "=", label: "Is equal" },
+  { value: "<>", label: "Is not equal" }
 ];
 
 export const CONDITIONS_LIST_NUMBER = [
@@ -21,8 +21,8 @@ export const CONDITIONS_LIST_NUMBER = [
   { value: ">=", label: "Greater or Equal" },
   { value: "<", label: "Less Than" },
   { value: "<=", label: "Less or Equal" },
-  { value: "==", label: "Is equal" },
-  { value: "!=", label: "Is not equal" }
+  { value: "=", label: "Is equal" },
+  { value: "<>", label: "Is not equal" }
 ];
 
 @Component({
@@ -35,7 +35,7 @@ export class TECBOG_Roles_Table implements AfterViewInit {
     rows: TECBOG_RolesModel[] = [];
     selectedRow: TECBOG_RolesModel;
     
-    public displayedColumns: string[] = ['tecbogRolesaplicacionCodigo', 'tecbogRolesCodigoRol', 'tecbogRolesRolNombre', 'tecbogRolesRolEstado'];
+    public displayedColumns: string[] = [ 'codigo_Rol', 'rol_Nombre', 'tiempo_Espera', 'rol_Estado'];
 
     public conditionsList = CONDITIONS_LIST;
     public conditionsListNumber = CONDITIONS_LIST_NUMBER;
@@ -45,7 +45,7 @@ export class TECBOG_Roles_Table implements AfterViewInit {
 
     filter = { 
       column:  "",
-      condition:  "==",
+      condition:  "=",
       value: null
     };
 
@@ -64,7 +64,7 @@ export class TECBOG_Roles_Table implements AfterViewInit {
 
     ngAfterViewInit() {
         // If the user changes the sort order, reset back to the first page.
-        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 1);
         
         merge(this.sort.sortChange, this.paginator.page)
           .pipe(
@@ -75,7 +75,7 @@ export class TECBOG_Roles_Table implements AfterViewInit {
               if (this.sort.active) {
                 sortExpr = `${this.sort.active} ${this.sort.direction}`;
               }
-              return this.TECBOG_RolesService.getTECBOG_RolesList(this.filter, this.paginator.pageSize, this.paginator.pageIndex, sortExpr);
+              return this.TECBOG_RolesService.getTECBOG_RolesList(this.filter, this.paginator.pageSize, this.paginator.pageIndex + 1, sortExpr);
             }),
             map(data => {
               // Flip flag to show that loading has finished.
@@ -83,7 +83,7 @@ export class TECBOG_Roles_Table implements AfterViewInit {
               this.isRateLimitReached = false;
               this.resultsLength = data.rowsCount;
         
-              return data.rows;
+              return data.rows.map((x) => new TECBOG_RolesModel(x));
             }),
             catchError(() => {
               this.isLoadingResults = false;

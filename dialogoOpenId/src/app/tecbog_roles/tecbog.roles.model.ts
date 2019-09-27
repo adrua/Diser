@@ -14,11 +14,11 @@ export class TECBOG_RolesModel {
     constructor(json: any = null) {
         this.relaciones = {};
         if (json !== null) {
-            this.tecbogRolesaplicacionCodigo = json.tecbogRolesaplicacionCodigo;
-            this.tecbogRolesCodigoRol = json.tecbogRolesCodigoRol;
+            this.tecbogRolesaplicacionCodigo = json.aplicacionCodigo;
+            this.tecbogRolesCodigoRol = json.codigoRol;
             this.tecboG_Roles_Comp =  json.tecboG_Roles_Comp;
-            this.tecbogRolesRolNombre = json.tecbogRolesRolNombre;
-            this.tecbogRolesRolEstado = json.tecbogRolesRolEstado;
+            this.tecbogRolesRolNombre = json.rolNombre;
+            this.tecbogRolesRolEstado = json.rolEstado;
         }
     }
 }
