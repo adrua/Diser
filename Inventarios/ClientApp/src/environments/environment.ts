@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  dataServiceUrl: "https://localhost:44374"
+  dataServiceUrl: "http://192.168.1.14:8081/DialogoSOA-1.0/DialogoApi"
 };
 
 /*

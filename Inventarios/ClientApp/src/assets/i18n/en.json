@@ -13,6 +13,15 @@
   "Monitor": {
     "_titulo": "Monitor"
   },
+  "login": {
+    "username": "User:",
+    "usernameError": "User invalid",
+    "password": "Password:",
+    "passwordError": "Password invalid",
+    "_guardar": "Continue",
+    "_cancelar": "Cancel",
+    "_titulo": "Login"
+  },
   "INVCOAreas": {
     "INVCOAreaId": "Id",
     "INVCOAreaIdError": "Id invalid",
@@ -103,5 +112,35 @@
     "_guardar": "Save and Continue",
     "_cancelar": "Cancel",
     "_titulo": "Assets"
-  }
+  },
+  "INVCOCiuu" : {
+    "INVCOCiuuCodigoCiiu" : "ID Ciiu",
+    "INVCOCiuuCodigoCiiuError" : "ID Ciiu invalido", 
+    "INVCOCiuuAgrupacion" : "Grouping",
+    "INVCOCiuuAgrupacionError" : "Grouping invalido", 
+    "INVCOCiuuCiudad" : "City",
+    "INVCOCiuuCiudadError" : "City invalido", 
+    "INVCOCiuuSectorEconomico" : "Sector Economico",
+    "INVCOCiuuSectorEconomicoError" : "Sector Economico invalido", 
+    "INVCOCiuuNombreHomologaCarteraCcial" : "Nombre Homologa Cartera Ccial",
+    "INVCOCiuuNombreHomologaCarteraCcialError" : "Nombre Homologa Cartera Ccial invalido", 
+    "INVCOCiuuHomologaDeceval" : "Homologa Deceval",
+    "INVCOCiuuHomologaDecevalError" : "Homologa Deceval invalido", 
+    "CodHomologaCarteraCcial" : "Cod Homologa Cartera Ccial",
+    "CodHomologaCarteraCcialError" : "Cod Homologa Cartera Ccial invalido", 
+    "INVCOCiuuHomologaRedeban" : "Homologa Redeban",
+    "INVCOCiuuHomologaRedebanError" : "Homologa Redeban invalido", 
+    "INVCOCiuuHomologacionSecDeceval" : "Homologacion Sec Deceval",
+    "INVCOCiuuHomologacionSecDecevalError" : "Homologacion Sec Deceval invalido", 
+    "INVCOCiuuCodigoAct" : "Codigo Act",
+    "INVCOCiuuCodigoActError" : "Codigo Act invalido", 
+    "INVCOCiuuNombreAct" : "Nombre Act",
+    "INVCOCiuuNombreActError" : "Nombre Act invalido", 
+    "INVCOCiuuActivo" : "Activo",
+    "INVCOCiuuActivoError" : "Activo invalido", 
+    "_guardar" : "Save and Continue",
+    "_cancelar" : "Cancel",
+    "_eliminar" : "deleted",
+    "_titulo" : "Ciuu Industries labor"
+}
 }

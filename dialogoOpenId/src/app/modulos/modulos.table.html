@@ -1,0 +1,92 @@
+<mat-table #datawindow [dataSource]="rows" class="mat-elevation-z8" matSort>
+  <!-- select! Column -->
+  <ng-container matColumnDef="select">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <mat-icon (click)="$event.stopPropagation(); this.selectedRow = row;">
+                    {{(selectedRow === row)?'arrow_left':'arrow_drop_down'}}
+                  </mat-icon>
+    </mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; let even = even; columns: displayedColumns; " [ngClass]="{'alternate-row-color': even}" (click)="onSelect($event, row);"></mat-row>
+  <picture id="p_1" [style.display]="'block'"></picture>
+  <ng-container matColumnDef="modulo_nombre">
+    <!--modulo_nombre: Column-->
+    <mat-header-cell id="moduloNombre_t" *matHeaderCellDef mat-sort-header disableClear>
+      <button mat-icon-button [matMenuTriggerFor]="menuModuloNombre">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <span>{{ 'modulos.moduloNombre' | translate }}:</span>
+    </mat-header-cell>
+    <mat-cell *matCellDef="let row" tabsequence="32766" format="[general]" id="modulo_nombre" [style.display]="'block'">{{row.moduloNombre}}</mat-cell>
+    <mat-menu #menuModuloNombre>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+                {{ 'modulos.moduloNombre' | translate }}:
+              </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field (click)="$event.stopPropagation()">
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder="Conditions" [(value)]="searchCondition.moduloNombre">
+            <mat-option *ngFor="let  condition of conditionsListNumber" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field (click)="$event.stopPropagation()">
+          <input type="text" matInput placeholder="Value" [(ngModel)]="searchValue.moduloNombre" />
+        </mat-form-field>
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="onClearColumn('modulo_nombre')">Clear</button>
+        <button mat-raised-button color="primary" (click)="onApplyFilter($event, 'modulo_nombre', 'moduloNombre')">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+  <ng-container matColumnDef="modulo_descripcion">
+    <!--modulo_descripcion: Column-->
+    <mat-header-cell id="moduloDescripcion_t" *matHeaderCellDef mat-sort-header disableClear>
+      <button mat-icon-button [matMenuTriggerFor]="menuModuloDescripcion">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <span>{{ 'modulos.moduloDescripcion' | translate }}:</span>
+    </mat-header-cell>
+    <mat-cell *matCellDef="let row" tabsequence="32766" format="[general]" id="modulo_descripcion" [style.display]="'block'">{{row.moduloDescripcion}}</mat-cell>
+    <mat-menu #menuModuloDescripcion>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+                {{ 'modulos.moduloDescripcion' | translate }}:
+              </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field (click)="$event.stopPropagation()">
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder="Conditions" [(value)]="searchCondition.moduloDescripcion">
+            <mat-option *ngFor="let  condition of conditionsListNumber" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field (click)="$event.stopPropagation()">
+          <input type="text" matInput placeholder="Value" [(ngModel)]="searchValue.moduloDescripcion" />
+        </mat-form-field>
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="onClearColumn('modulo_descripcion')">Clear</button>
+        <button mat-raised-button color="primary" (click)="onApplyFilter($event, 'modulo_descripcion', 'moduloDescripcion')">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+</mat-table>
+<mat-toolbar class="mat-toolbar-opc">
+  <mat-toolbar-row>
+    <mat-icon (click)="onAdd($event)" title="{{ 'Main._addRow' | translate }}">add</mat-icon>
+    <mat-icon (click)="onEdit($event)" title="{{ 'Main._editRow' | translate }}">edit</mat-icon>
+    <mat-icon (click)="onRefresh($event)" title="{{ 'Main._refreshTable' | translate }}">refresh</mat-icon>
+    <mat-icon (click)="onExportCsv($event)" title="{{ 'Main._exportCSV' | translate }}">save_alt</mat-icon>
+    <mat-icon (click)="onCopyRows($event)" title="{{ 'Main._copyRows' | translate }}">file_copy</mat-icon>
+    <mat-icon (click)="onPasteRows($event)" title="{{ 'Main._pasteRows' | translate }}">insert_drive_file</mat-icon>
+    <span class="example-spacer"></span>
+    <mat-paginator class="paginator" [length]="resultsLength" [pageSize]="_pageSize" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    <div *ngIf="isLoadingResults" class="ml-2 row">
+      <mat-spinner [diameter]="30"></mat-spinner>
+      <span class="ml-2" style="font-size: 12px">Loading...</span>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

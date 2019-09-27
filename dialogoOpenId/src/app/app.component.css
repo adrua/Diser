@@ -1,0 +1,78 @@
+:host ::ng-deep .mat-list-base .mat-list-item .mat-list-item-content {
+    justify-content: left;
+}
+
+.login-container {
+    width: 100%;
+    height: 100%;
+}
+
+.logged-container {
+    width: 100%;
+    height: 100%;
+}
+
+.row-first {
+    margin-top: 9.5%;
+    overflow: hidden;
+}
+
+.img {
+    margin-right: 15px;
+}
+
+.title-logo {
+    color: #006DF0;
+}
+.img-logo {
+    width: 50px;
+    height: 40px;
+}
+
+img.list-modules {
+    height: 60%;
+    float: left;
+    padding-left: 0; 
+}
+
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+    height: 40px;
+    font-size: 12px;
+}
+
+.mat-list-text a.list-modules {
+    float: right;
+    padding-left: 0px; 
+}
+
+mat-nav-list.list-groups {
+    width: inherit;
+    padding-left: 54px;
+    padding-top: 0;
+}
+
+mat-nav-list.list-groups mat-list-item {
+    font-size: 15px;
+}
+
+mat-nav-list.list-functions {
+    width: inherit;
+    padding-left: 15px;
+    padding-top: 0;
+}
+  
+mat-nav-list.list-functions mat-list-item {
+    font-size: 10px;
+}
+
+mat-sidenav {
+    max-width: 30%;
+}
+
+.mat-spinner {
+    margin: 0 auto;
+}
+
+.ruta-activa {
+    background-color: #006DF0;
+}

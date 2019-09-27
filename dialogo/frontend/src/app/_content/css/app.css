@@ -1,0 +1,132 @@
+﻿.help-block {
+    font-size: 12px;
+}
+body{
+    background: #f0f0f0;
+    font-family:  'Roboto', sans-serif;
+    font-size: 14px;
+  }
+  
+  /*INICIO MENU*/
+  /*Para  primer nivel (MENU)*/
+  .menu-side{
+    list-style: none;
+    line-height: 40px;
+    margin: 2em auto;
+    background:#01579b;
+    /*outline: 1px solid red;*/
+    padding-left: 0;
+    width: 13em;
+    max-height: 100%;
+    margin-bottom: 1px;
+  
+  }
+  /*
+  .menu-side a:hover{
+    margin-left: 10em;
+    --webkit-transition : all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+  }
+  */
+  /*Todo A excepto los ttulos que tienen dropdo*/
+  .menu-side a{
+    color: #fff;
+    display: block;
+    padding-left: 0em;
+    text-decoration: none;
+    text-transform: ;
+    width: 100%;
+    margin-top: 1px;
+  }
+  
+  .menu-side li{
+    box-shadow: 3px 0 rgba(255,255,255,.2) inset ;
+    margin-bottom: 1px;
+    padding-left: 1em;
+    /*outline: 1px solid green;*/
+  }
+  
+  /*
+  .menu-side li:hover{
+    box-shadow: 14em 0 rgba(0, 0, 0,.8) inset;
+  }
+  */
+  
+  /*Para todo segundo nivel (SUBMENU)*/
+  .menu-side ul{
+    background:#0277bd;
+  }
+  
+  /*Para todo tercer nivel (SUBSUBMENU)*/
+  .menu-side ul ul {
+   background:#0288d1;
+  }
+  
+  .item ul {
+    list-style: ;
+    padding: 0;
+    margin-top: 1px;
+  }
+  
+  /*Para todos los menus-titulos*/
+  .nav,  label{
+  box-shadow: 3px 0 rgba(255,255,255,.2) inset ;
+  color: #fff;
+  display: block;
+  padding-left: 1em;
+  margin-bottom: 1px;
+  /*outline: 1px solid green;*/
+  
+  }
+  
+  /*
+  .nav, label:hover{
+      box-shadow: 14em 0 rgba(255, 255, 255,.2) inset;
+  }
+  */
+  
+  #subsubmenu3 li a{
+    background: red;
+  }
+  /*POSICION RESP DEL MENU-SIDE*/
+  nav{
+    background: #01579b;
+    box-sizing: border-box;
+    padding-right: .25em;
+    padding-top: 3em;
+    position: absolute;
+    left: -18em;
+    top: 0;
+    transition: all .3s;
+    z-index: 20;
+    height: 100%;
+  }
+  nav.mostrar{
+    left: 0;
+  }
+  
+  #mostrar-nav{
+    cursor: pointer;
+    position: absolute;
+    background: url("Images/mi.png");
+    top: 2em;
+    left: 1em;
+    width: 32px;
+    height: 32px;
+    z-index: 30;
+  }
+  
+  
+  .menu-side .item ul, .nav input [type="checkbox"]{
+    display: none;
+  }
+  
+  #menu:checked ~ .multi-nivel, .item input:checked ~ ul{
+    display: block;
+  }
+  
+  label:hover{
+    cursor: pointer;
+  }
+  

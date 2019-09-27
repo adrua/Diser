@@ -1,0 +1,129 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ 'INVCOCiuu._titulo' | translate }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="INVCO_CiuuForm" (ngSubmit)="onSubmit(INVCO_CiuuForm.value)" autocomplete="off">
+            <div class="dialog-content">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="number"
+                                    formControlName="invcoCiuuCodigoCiiu"
+                                    placeholder="{{ 'INVCOCiuu.INVCOCiuuCodigoCiiu' | translate }}!" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.invcoCiuuCodigoCiiu.invalid && INVCO_CiuuForm.controls.invcoCiuuCodigoCiiu.touched">{{ "INVCOCiuu.INVCOCiuuCodigoCiiuError" | translate }}</mat-error>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="number"
+                                    formControlName="invcoCiuuAgrupacion"
+                                    placeholder="{{ 'INVCOCiuu.INVCOCiuuAgrupacion' | translate }}:" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.invcoCiuuAgrupacion.invalid && INVCO_CiuuForm.controls.invcoCiuuAgrupacion.touched">{{ "INVCOCiuu.INVCOCiuuAgrupacionError" | translate }}</mat-error>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="number"
+                                    formControlName="invcoCiuuCiudad"
+                                    placeholder="{{ 'INVCOCiuu.INVCOCiuuCiudad' | translate }}:" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.invcoCiuuCiudad.invalid && INVCO_CiuuForm.controls.invcoCiuuCiudad.touched">{{ "INVCOCiuu.INVCOCiuuCiudadError" | translate }}</mat-error>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="number"
+                                    formControlName="invcoCiuuSectorEconomico"
+                                    placeholder="{{ 'INVCOCiuu.INVCOCiuuSectorEconomico' | translate }}:" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.invcoCiuuSectorEconomico.invalid && INVCO_CiuuForm.controls.invcoCiuuSectorEconomico.touched">{{ "INVCOCiuu.INVCOCiuuSectorEconomicoError" | translate }}</mat-error>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="text"
+                                    formControlName="invcoCiuuNombreHomologaCarteraCcial"
+                                    placeholder="{{ 'INVCOCiuu.INVCOCiuuNombreHomologaCarteraCcial' | translate }}?" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.invcoCiuuNombreHomologaCarteraCcial.invalid && INVCO_CiuuForm.controls.invcoCiuuNombreHomologaCarteraCcial.touched">{{ "INVCOCiuu.INVCOCiuuNombreHomologaCarteraCcialError" | translate }}</mat-error>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="number"
+                                    formControlName="invcoCiuuHomologaDeceval"
+                                    placeholder="{{ 'INVCOCiuu.INVCOCiuuHomologaDeceval' | translate }}:" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.invcoCiuuHomologaDeceval.invalid && INVCO_CiuuForm.controls.invcoCiuuHomologaDeceval.touched">{{ "INVCOCiuu.INVCOCiuuHomologaDecevalError" | translate }}</mat-error>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="number"
+                                    formControlName="codHomologaCarteraCcial"
+                                    placeholder="{{ 'INVCOCiuu.CodHomologaCarteraCcial' | translate }}:" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.codHomologaCarteraCcial.invalid && INVCO_CiuuForm.controls.codHomologaCarteraCcial.touched">{{ "INVCOCiuu.CodHomologaCarteraCcialError" | translate }}</mat-error>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="number"
+                                    formControlName="invcoCiuuHomologaRedeban"
+                                    placeholder="{{ 'INVCOCiuu.INVCOCiuuHomologaRedeban' | translate }}:" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.invcoCiuuHomologaRedeban.invalid && INVCO_CiuuForm.controls.invcoCiuuHomologaRedeban.touched">{{ "INVCOCiuu.INVCOCiuuHomologaRedebanError" | translate }}</mat-error>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="number"
+                                    formControlName="invcoCiuuHomologacionSecDeceval"
+                                    placeholder="{{ 'INVCOCiuu.INVCOCiuuHomologacionSecDeceval' | translate }}:" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.invcoCiuuHomologacionSecDeceval.invalid && INVCO_CiuuForm.controls.invcoCiuuHomologacionSecDeceval.touched">{{ "INVCOCiuu.INVCOCiuuHomologacionSecDecevalError" | translate }}</mat-error>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="number"
+                                    formControlName="invcoCiuuCodigoAct"
+                                    placeholder="{{ 'INVCOCiuu.INVCOCiuuCodigoAct' | translate }}:" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.invcoCiuuCodigoAct.invalid && INVCO_CiuuForm.controls.invcoCiuuCodigoAct.touched">{{ "INVCOCiuu.INVCOCiuuCodigoActError" | translate }}</mat-error>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="text"
+                                    formControlName="invcoCiuuNombreAct"
+                                    placeholder="{{ 'INVCOCiuu.INVCOCiuuNombreAct' | translate }}:" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.invcoCiuuNombreAct.invalid && INVCO_CiuuForm.controls.invcoCiuuNombreAct.touched">{{ "INVCOCiuu.INVCOCiuuNombreActError" | translate }}</mat-error>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <mat-checkbox
+                                formControlName="invcoCiuuActivo" >
+                                {{ 'INVCOCiuu.INVCOCiuuActivo' | translate }}:</mat-checkbox>
+                        <mat-error *ngIf="INVCO_CiuuForm.controls.invcoCiuuActivo.invalid && INVCO_CiuuForm.controls.invcoCiuuActivo.touched">{{ "INVCOCiuu.INVCOCiuuActivoError" | translate }}</mat-error>
+                    </div>
+              </div>
+            </div>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <mat-spinner *ngIf="_proc" style="width: 15px; height:15px"></mat-spinner>
+        <button mat-button (click)="onSubmit(INVCO_CiuuForm.value);" [disabled]="!INVCO_CiuuForm.valid">{{ "INVCOCiuu._guardar" | translate  }}</button>
+        <button mat-button (click)="onDelete(INVCO_CiuuForm.value);" [disabled]="!INVCO_CiuuForm.valid">{{ "INVCOCiuu._eliminar" | translate  }}</button>
+        <button mat-button mat-dialog-close>{{ "INVCOCiuu._cancelar" | translate  }}</button>
+    </mat-card-actions>
+</mat-card>

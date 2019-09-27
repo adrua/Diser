@@ -13,6 +13,15 @@
   "Monitor": {
     "_titulo": "Monitor"
   },
+  "login": {
+    "username": "Usuario",
+    "usernameError": "Usuario invalid",
+    "password": "Clave",
+    "passwordError": "Clave invalid",
+    "_guardar": "Seguir",
+    "_cancelar": "Cancelar",
+    "_titulo": "Autenticarse"
+  }, 
   "INVCOAreas": {
     "INVCOAreaId": "Id",
     "INVCOAreaIdError": "Id invalido",
@@ -103,5 +112,35 @@
     "_guardar": "Salvar y Seguir",
     "_cancelar": "Cancelar",
     "_titulo": "Bienes"
-  }
+  },
+  "INVCOCiuu" : {
+    "INVCOCiuuCodigoCiiu" : "Codigo Ciiu",
+    "INVCOCiuuCodigoCiiuError" : "Codigo Ciiu invalido", 
+    "INVCOCiuuAgrupacion" : "Agrupacion",
+    "INVCOCiuuAgrupacionError" : "Agrupacion invalido", 
+    "INVCOCiuuCiudad" : "Ciudad",
+    "INVCOCiuuCiudadError" : "Ciudad invalido", 
+    "INVCOCiuuSectorEconomico" : "Sector Economico",
+    "INVCOCiuuSectorEconomicoError" : "Sector Economico invalido", 
+    "INVCOCiuuNombreHomologaCarteraCcial" : "Nombre Homologa Cartera Ccial",
+    "INVCOCiuuNombreHomologaCarteraCcialError" : "Nombre Homologa Cartera Ccial invalido", 
+    "INVCOCiuuHomologaDeceval" : "Homologa Deceval",
+    "INVCOCiuuHomologaDecevalError" : "Homologa Deceval invalido", 
+    "CodHomologaCarteraCcial" : "Cod Homologa Cartera Ccial",
+    "CodHomologaCarteraCcialError" : "Cod Homologa Cartera Ccial invalido", 
+    "INVCOCiuuHomologaRedeban" : "Homologa Redeban",
+    "INVCOCiuuHomologaRedebanError" : "Homologa Redeban invalido", 
+    "INVCOCiuuHomologacionSecDeceval" : "Homologacion Sec Deceval",
+    "INVCOCiuuHomologacionSecDecevalError" : "Homologacion Sec Deceval invalido", 
+    "INVCOCiuuCodigoAct" : "Codigo Act",
+    "INVCOCiuuCodigoActError" : "Codigo Act invalido", 
+    "INVCOCiuuNombreAct" : "Nombre Act",
+    "INVCOCiuuNombreActError" : "Nombre Act invalido", 
+    "INVCOCiuuActivo" : "Activo",
+    "INVCOCiuuActivoError" : "Activo invalido", 
+    "_guardar" : "Salvar y Seguir",
+    "_eliminar" : "Eliminar",
+    "_cancelar" : "Cancelar",
+    "_titulo" : "Ciuu"
+}
 }

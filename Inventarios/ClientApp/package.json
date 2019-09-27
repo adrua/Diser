@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "build:ssr": "ng run Inventarios:server:dev",
     "test": "ng test",
@@ -46,6 +46,7 @@
     "@types/jasminewd2": "~2.0.6",
     "@types/node": "~11.10.5",
     "codelyzer": "^5.0.1",
+    "http-proxy-middleware": "^0.19.1",
     "jasmine-core": "~3.3.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^4.0.0",

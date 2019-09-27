@@ -1,0 +1,53 @@
+<body>
+  <!--authorization-->
+  <div *ngIf="!isLogin" class="login-container">
+    <div class="row row-first"></div>
+    <div class="row">
+      <div class="col-sm-3 col-xs"></div>
+      <div class="col-sm-2 col-xs">
+        <img src="../assets/images/bayport_logo.jpg" />
+      </div>
+      <div class="col-sm-3 col-xs"></div>
+      <app-login (logged)="logged();" class="col-sm-3 col-xs-12"></app-login>
+      <div class="col-sm-1 col-xs"></div>
+    </div>
+    <div class="row login-row-bottom">
+      <div class="col-sm-2 col-xs-12">
+        <img src="../assets/images/tecnoevolucion_logo.png" class="login-logo" />
+      </div>
+      <div class="col-sm-6 col-xs-12"></div>
+      <div class="col-sm-2 col-xs-12">
+          <img src="../assets/images/dialogo_logo.png" class="login-logo" />
+      </div>
+      <div class="col-sm-2 col-xs">
+        <img src="../assets/images/cmmidev3_logo.png" class="login-logo" />
+      </div>
+    </div>
+  </div>
+
+  <!--Navigation-->
+  <div *ngIf="isLogin" class="logged-container">
+    <mat-sidenav-container class="mat-sidenav-container-logged" autosize>
+          <mat-sidenav mode="side" [(opened)]=opened>
+              <div class="row m-0 p-3 pb-0 d-flex align-items-center" style="cursor: pointer;" [routerLink]="['/']">
+                  <img mat-flat-button src="../assets/images/fortalezaicon.png" class="img-logo"/>
+                  <h2 class="m-0 pl-1 title-logo">Bayport</h2>
+                </div>
+              <mat-nav-list style="width: inherit;" class="pt-0">
+                <mat-divider></mat-divider>
+                <mat-list-item >
+                  <img mat-flat-button src="../assets/images/roles.png" class="list-modules img"/>
+                  <a [routerLink]="['/roles']" routerLinkActive="router-link-active"  class="list-modules">Roles</a>
+                </mat-list-item>
+                <mat-list-item >
+                  <img mat-flat-button src="../assets/images/modulo.png" class="list-modules img"/>
+                  <a [routerLink]="['/modulos']" routerLinkActive="router-link-active"  class="list-modules">Modulos</a>
+                </mat-list-item>
+              </mat-nav-list>            
+          </mat-sidenav>
+          <mat-sidenav-content>
+              <router-outlet></router-outlet>
+          </mat-sidenav-content>
+      </mat-sidenav-container> 
+  </div>
+</body>

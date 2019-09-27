@@ -1,0 +1,21 @@
+
+<!--Header-->
+<div class="navbar-fixed">
+  <nav class="gradient-navbar">
+      <div class="nav-wrapper ">
+          <a href=" " class="brand-logo"><img class="logo" src="/images/Logo_final_bayport_only.png" alt="Logo Bayport"></a>
+             <a  *ngIf="currentUser" routerLink="/" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+          <ul class="right" *ngIf="currentUser">
+              <li>
+                <a (click)="logout()" class="waves-effect waves-block waves-light notification-button" data-activates="notifications-dropdown">
+                <i class="material-icons">exit_to_app</i></a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+</div>
+<!-- Vista -->
+<router-outlet></router-outlet>
+<!-- Footer -->
+<div class="text-center">
+</div>

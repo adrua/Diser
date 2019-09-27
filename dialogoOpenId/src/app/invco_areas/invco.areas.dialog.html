@@ -1,0 +1,48 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ 'INVCOAreas._titulo' | translate }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="INVCO_AreasForm" (ngSubmit)="onSubmit(INVCO_AreasForm.value)">
+            <div class="dialog-content">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12" style="display: none;">
+                        <mat-form-field>
+                            <input matInput type="number" readonly
+                                    formControlName="invcoAreaId"
+                                    placeholder="{{ 'INVCOAreas.INVCOAreaId' | translate }}!" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_AreasForm.controls.invcoAreaId.invalid && INVCO_AreasForm.controls.invcoAreaId.touched">{{ "INVCOAreas.INVCOAreaIdError" | translate }}</mat-error>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <mat-form-field>
+                            <input matInput type="text"
+                                    formControlName="invcoAreaDescripcion"
+                                    placeholder="{{ 'INVCOAreas.INVCOAreaDescripcion' | translate }}:" />
+                        </mat-form-field>
+                        <mat-error *ngIf="INVCO_AreasForm.controls.invcoAreaDescripcion.invalid && INVCO_AreasForm.controls.invcoAreaDescripcion.touched">{{ "INVCOAreas.INVCOAreaDescripcionError" | translate }}</mat-error>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <label>{{ "INVCOAreas.INVCOAreaEstado" | translate }}:</label>
+                        <mat-radio-group
+                            formControlName="invcoAreaEstado">
+                          <mat-radio-button value="AC" selected="true">{{ "INVCOAreas._INVCOAreaEstado.Activo" | translate }}</mat-radio-button>
+                          <mat-radio-button value="CN">{{ "INVCOAreas._INVCOAreaEstado.Cancelado" | translate }}</mat-radio-button>
+                          <mat-radio-button value="AN">{{ "INVCOAreas._INVCOAreaEstado.Anulado" | translate }}</mat-radio-button>
+                        </mat-radio-group >
+                        <mat-error *ngIf="INVCO_AreasForm.controls.invcoAreaEstado.invalid && INVCO_AreasForm.controls.invcoAreaEstado.touched">{{ "INVCOAreas.INVCOAreaEstadoError" | translate }}</mat-error>
+                    </div>
+              </div>
+            </div>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <mat-spinner *ngIf="_proc" style="width: 15px; height:15px"></mat-spinner>
+        <button mat-button (click)="onSubmit(INVCO_AreasForm.value);" [disabled]="!INVCO_AreasForm.valid">{{ "INVCOAreas._guardar" | translate  }}</button>
+        <button mat-button mat-dialog-close>{{ "INVCOAreas._cancelar" | translate  }}</button>
+    </mat-card-actions>
+</mat-card>

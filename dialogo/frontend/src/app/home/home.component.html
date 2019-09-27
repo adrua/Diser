@@ -1,0 +1,10 @@
+<div class="col-md-6 col-md-offset-3">
+  <div id="cuerpo">
+    <div align= "center" class="rowmodulos">
+      <div class="columnmodulos" *ngFor="let module of modules" >
+        <span style="color:#579BD3; font-size: 150%" > {{module.modulo_nombre}}</span><br>
+        <img class="zoom" src="{{module.ruta_imagen}}" style="width:45%"  (click)="selectModule(module)" >
+      </div>
+    </div>
+  </div>
+</div>

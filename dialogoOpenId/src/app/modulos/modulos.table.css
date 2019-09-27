@@ -1,0 +1,143 @@
+/* datawindow */
+#datawindow {
+	/* position: relative;*/
+	/*units:  (0, );*/
+	color: #C0C0C0; /* 00C0C0C0:(12632256, ) */
+	/*printorientation:  (0, );*/
+	/*printmarginleft:  (110, );*/
+	/*printmarginright:  (110, );*/
+	/*printmargintop:  (96, );*/
+	/*printmarginbottom:  (96, );*/
+	/*printbuttons:  (no, );*/
+	/*printpreviewbuttons:  (no, );*/
+	/*printcliptext:  (no, );*/
+	/*hidegrayline:  (no, );*/
+}
+
+/* header */
+#header {
+	/* position: relative;*/
+	height: 16px;
+	color: #FFFFFF;
+	opacity: 0.5;
+}
+
+/* summary */
+#summary {
+	/* position: relative;*/
+	height: 0px;
+	color: #FFFFFF;
+	opacity: 0.5;
+}
+
+/* footer */
+#footer {
+	/* position: relative;*/
+	height: 0px;
+	color: #FFFFFF;
+	opacity: 0.5;
+}
+
+/* detail */
+#detail {
+	/* position: relative;*/
+	height: 14px;
+	color: #FFFFFF;
+	opacity: 0.5;
+}
+
+/* statictext: text */
+#moduloNombre_t {
+	/* position: absolute;*/
+	text-align: center;
+	border-style: solid;
+	color: #FFFFFF; /* 00FFFFFF:(16777215, ) */
+	/*left: 3px;*/
+	/*top: 3px;*/
+	height: 12px;
+	width: 463px;
+	/*font-face: (Arial             , );*/
+	font-size: 10px;
+	font-weight: 400;
+	font-family: 2;
+	/*font-pitch: 2;*/
+	/*font-charset: 0;*/
+	/*backgroundmode:  (2, );*/
+	background-color: #000000; /* 00000000:(0, ) */
+}
+
+/* statictext: text */
+#moduloDescripcion_t {
+	/* position: absolute;*/
+	text-align: center;
+	border-style: solid;
+	color: #FFFFFF; /* 00FFFFFF:(16777215, ) */
+	/*left: 469px;*/
+	/*top: 3px;*/
+	height: 12px;
+	width: 172px;
+	/*font-face: (Arial             , );*/
+	font-size: 10px;
+	font-weight: 400;
+	font-family: 2;
+	/*font-pitch: 2;*/
+	/*font-charset: 0;*/
+	/*backgroundmode:  (2, );*/
+	background-color: #000000; /* 00000000:(0, ) */
+}
+
+/* bitmap */
+#p1 {
+	/* position: relative;*/
+	/*filename:  (C:\Dialogo\bmps\library.bmp, );*/
+	/*left: 643px;*/
+	/*top: 0px;*/
+	height: 11px;
+	width: 19px;
+	border-style: none none solid none;
+}
+
+/* editmask: column */
+#moduloNombre {
+	/* position: absolute;*/
+	text-align: left;
+	border-style: solid;
+	color: #000000; /* 00000000:(0, ) */
+	/*left: 3px;*/
+	/*top: 0px;*/
+	height: 13px;
+	width: 463px;
+	/*editautohscroll:  (yes, );*/
+	/*editimemode:  (0, );*/
+	/*font-face: (Arial             , );*/
+	font-size: 10px;
+	font-weight: 400;
+	font-family: 2;
+	/*font-pitch: 2;*/
+	/*font-charset: 0;*/
+	/*backgroundmode:  (2, );*/
+	background-color: #FFFFFF; /* 01DFDFDF:(31449055, ) */
+}
+
+/* editmask: column */
+#moduloDescripcion {
+	/* position: absolute;*/
+	text-align: left;
+	border-style: solid;
+	color: #000000; /* 00000000:(0, ) */
+	/*left: 469px;*/
+	/*top: 0px;*/
+	height: 13px;
+	width: 172px;
+	/*editautohscroll:  (yes, );*/
+	/*editimemode:  (0, );*/
+	/*font-face: (Arial             , );*/
+	font-size: 8.75px;
+	font-weight: 400;
+	font-family: 2;
+	/*font-pitch: 2;*/
+	/*font-charset: 0;*/
+	/*backgroundmode:  (2, );*/
+	background-color: #FFFFFF; /* 00FFFFFF:(16777215, ) */
+}
+

@@ -1,0 +1,382 @@
+<mat-form-field class="mat-form-field-filter">
+  <input matInput #filter (keyup)="applyFilter($event.target.value)" placeholder="{{ 'Main._filtro' | translate }}">
+</mat-form-field>
+<mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+<mat-table [dataSource]="rows" class="mat-elevation-z8" matSort>
+    <!-- select! Column -->
+ <ng-container matColumnDef="select">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <mat-icon (click)="$event.stopPropagation(); this.selectedRow = row;">
+        {{(selectedRow === row)?'arrow_left':'arrow_drop_down'}}
+      </mat-icon>
+    </mat-cell>
+  </ng-container>
+
+    <!-- Id! Column -->
+  <ng-container matColumnDef="invcoBienId">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOBienId" | translate }}!</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.invcoBienId}}</mat-cell>
+    <mat-menu #menuINVCOBienId>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOBienId" | translate }}!
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoBienId">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoBienId">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoBienId')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+    <!-- Nombre: Column -->
+  <ng-container matColumnDef="invcoBienNombre">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOBienNombre" | translate }}:</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.invcoBienNombre}}</mat-cell>
+    <mat-menu #menuINVCOBienNombre>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOBienNombre" | translate }}:
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoBienNombre">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoBienNombre">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoBienNombre')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+    <!-- Descripcion: Column -->
+  <ng-container matColumnDef="invcoBienDescripcion">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOBienDescripcion" | translate }}:</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.invcoBienDescripcion}}</mat-cell>
+    <mat-menu #menuINVCOBienDescripcion>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOBienDescripcion" | translate }}:
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoBienDescripcion">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoBienDescripcion">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoBienDescripcion')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+    <!-- Tipo: Column -->
+  <ng-container matColumnDef="invcoBienTipo">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOBienTipo" | translate }}:</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.invcoBienTipo}}</mat-cell>
+    <mat-menu #menuINVCOBienTipo>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOBienTipo" | translate }}:
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoBienTipo">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoBienTipo">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoBienTipo')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+    <!-- Serial: Column -->
+  <ng-container matColumnDef="invcoBienSerial">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOBienSerial" | translate }}:</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.invcoBienSerial}}</mat-cell>
+    <mat-menu #menuINVCOBienSerial>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOBienSerial" | translate }}:
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoBienSerial">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoBienSerial">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoBienSerial')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+    <!-- Valor Compra: Column -->
+  <ng-container matColumnDef="invcoBienValorCompra">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOBienValorCompra" | translate }}:</mat-header-cell>
+    <mat-cell *matCellDef="let row" style="text-align: left;">{{row.invcoBienValorCompra | currency}}</mat-cell>
+    <mat-menu #menuINVCOBienValorCompra>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOBienValorCompra" | translate }}:
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoBienValorCompra">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoBienValorCompra">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoBienValorCompra')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+    <!-- Fecha Compra: Column -->
+  <ng-container matColumnDef="invcoBienFechaCompra">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOBienFechaCompra" | translate }}:</mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.invcoBienFechaCompra | date}} </mat-cell>
+    <mat-menu #menuINVCOBienFechaCompra>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOBienFechaCompra" | translate }}:
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoBienFechaCompra">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoBienFechaCompra">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoBienFechaCompra')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+    <!-- Estado Actual: Column -->
+  <ng-container matColumnDef="invcoBienEstadoActual">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOBienEstadoActual" | translate }}:</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.invcoBienEstadoActual}}</mat-cell>
+    <mat-menu #menuINVCOBienEstadoActual>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOBienEstadoActual" | translate }}:
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoBienEstadoActual">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoBienEstadoActual">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoBienEstadoActual')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+    <!-- Area: Column -->
+  <ng-container matColumnDef="invcoAreaId">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOAreaId" | translate }}:</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.invcoAreaId}}</mat-cell>
+    <mat-menu #menuINVCOAreaId>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOAreaId" | translate }}:
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoAreaId">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoAreaId">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoAreaId')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+    <!-- Area: Column -->
+  <ng-container matColumnDef="invcoAreaDescripcion">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOAreaDescripcion" | translate }}:</mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.relaciones.invcoAreaDescripcion}} </mat-cell>
+    <mat-menu #menuINVCOAreaDescripcion>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOAreaDescripcion" | translate }}:
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoAreaDescripcion">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoAreaDescripcion">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoAreaDescripcion')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+    <!-- Nombre: Column -->
+  <ng-container matColumnDef="invcoPersonaId">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOPersonaId" | translate }}:</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.invcoPersonaId}}</mat-cell>
+    <mat-menu #menuINVCOPersonaId>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOPersonaId" | translate }}:
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoPersonaId">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoPersonaId">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoPersonaId')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+    <!-- Nombre: Column -->
+  <ng-container matColumnDef="invcoPersonaNombreCompleto">
+    <mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ "INVCOBienes.INVCOPersonaNombreCompleto" | translate }}:</mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.relaciones.invcoPersonaNombreCompleto}} </mat-cell>
+    <mat-menu #menuINVCOPersonaNombreCompleto>
+      <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+        {{ "INVCOBienes.INVCOPersonaNombreCompleto" | translate }}:
+      </div>
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.invcoPersonaNombreCompleto">
+            <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <mat-form-field>
+          <input matInput placeholder="Value" [(ngModel)]="searchValue.invcoPersonaNombreCompleto">
+        </mat-form-field>
+      </div>
+
+      <div mat-menu-item mat-filter-item [disableRipple]="true">
+        <button mat-raised-button (click)="clearColumn('invcoPersonaNombreCompleto')">Clear</button>
+        <button mat-raised-button color="primary" (click)="applyFilter(null)">Search</button>
+      </div>
+    </mat-menu>
+  </ng-container>
+
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;" 
+            (click)="onSelect($event, row);"></mat-row>
+</mat-table>
+<mat-toolbar>
+    <mat-toolbar-row>
+      <mat-icon (click)="add()" title="{{ 'Main._addRow' | translate }}">add</mat-icon>
+      <mat-icon (click)="edit()" title="{{ 'Main._editRow' | translate }}">edit</mat-icon>
+      <mat-icon (click)="refresh()" title="{{ 'Main._refreshTable' | translate }}">refresh</mat-icon>
+      <mat-icon (click)="exportCsv(rows)" title="{{ 'Main._exportCSV' | translate }}">save_alt</mat-icon>
+      <span class="example-spacer"></span>
+      <mat-paginator class="paginator" 
+            [length]="resultsLength" 
+            [pageSize]="_pageSize" 
+            [pageSizeOptions]="[5, 10, 25, 100]">
+      </mat-paginator>
+    </mat-toolbar-row>
+</mat-toolbar>
