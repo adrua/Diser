@@ -13,7 +13,7 @@ export class TECBOGRolesService {
     private TECBOGRolesUrl = '';  // URL to web api
 
     constructor(private http: HttpClient) {
-        this.TECBOGRolesUrl = `${environment.dataServiceUrl}/Roles`;
+        this.TECBOGRolesUrl = `${environment.dataServiceUrl}/api/TECBOG_RolesDataServices_27785_DLG`;
     }
 
     getTECBOG_Roles(row: TECBOG_RolesModel): Observable<TECBOG_RolesModel> {
@@ -52,7 +52,7 @@ export class TECBOGRolesService {
               params.sort = sortExpr;
         }
 
-        const sUrl = `${this.TECBOGRolesUrl}/Page`;
+        const sUrl = `${this.TECBOGRolesUrl}/Search`;
 
         return this.http.get<any>(sUrl, { params }).pipe(
             retry(3),

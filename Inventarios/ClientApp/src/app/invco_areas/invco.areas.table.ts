@@ -38,114 +38,123 @@ export const CONDITIONS_FUNCTIONS = { // search method base on conditions list v
   // styleUrls: ['./invco.areas.table.css'],
   providers: [INVCOAreasService]
 })
-export class INVCO_Areas_Table implements AfterViewInit  {
-    rows: INVCO_AreasModel[] = [];
-    selectedRow: INVCO_AreasModel;
-    
-    public displayedColumns: string[] = ['invcoAreaId', 'invcoAreaDescripcion', 'invcoAreaEstado'];
+export class INVCO_Areas_Table implements AfterViewInit {
+  rows: INVCO_AreasModel[] = [];
+  selectedRow: INVCO_AreasModel;
 
-    public conditionsList = CONDITIONS_LIST;
-    public searchValue: any = {};
-    public searchCondition: any = {};
-    private _filterMethods = CONDITIONS_FUNCTIONS;
-    public _pageSize = 10;
+  public displayedColumns: string[] = ['invcoAreaId', 'invcoAreaDescripcion', 'invcoAreaEstado'];
 
-    resultsLength = 0;
-    isLoadingResults = true;
-    isRateLimitReached = false;
-    
-    @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-    @ViewChild(MatSort, {static: false}) sort: MatSort;
-    @ViewChild('filter', { static: false }) filter: ElementRef;
+  public conditionsList = CONDITIONS_LIST;
+  public searchValue: any = {};
+  public searchCondition: any = {};
+  private _filterMethods = CONDITIONS_FUNCTIONS;
+  public _pageSize = 10;
 
-    _proc: boolean = false;
-    _status: boolean = false;
+  filter = {
+    column: "",
+    condition: "==",
+    value: null
+  };
 
-    constructor(public dialog: MatDialog,
-                private INVCO_AreasService: INVCOAreasService) { }
+  resultsLength = 0;
+  isLoadingResults = true;
+  isRateLimitReached = false;
 
-    ngAfterViewInit() {
-        // If the user changes the sort order, reset back to the first page.
-        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
-        
-        merge(this.sort.sortChange, this.paginator.page)
-          .pipe(
-            startWith({}),
-            switchMap(() => {
-              this.isLoadingResults = true;
-              let sortExpr = '';
-              if (this.sort.active) {
-                sortExpr = `${this.sort.active} ${this.sort.direction}`;
-              }
-              return this.INVCO_AreasService.getINVCO_AreasList(this.filter.nativeElement.value || '', this.paginator.pageSize, this.paginator.pageIndex, sortExpr);
-            }),
-            map(data => {
-              // Flip flag to show that loading has finished.
-              this.isLoadingResults = false;
-              this.isRateLimitReached = false;
-              this.resultsLength = data.rowsCount;
-        
-              return data.rows;
-            }),
-            catchError(() => {
-              this.isLoadingResults = false;
-              // Catch if the API has reached its rate limit. Return empty data.
-              this.isRateLimitReached = true;
-              return observableOf([]);
-            })
-          ).subscribe(data => this.rows = data);
-    }
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
 
-    add(): void {
-      this.selectedRow = new INVCO_AreasModel();
+  _proc: boolean = false;
+  _status: boolean = false;
 
+  constructor(public dialog: MatDialog,
+    private INVCO_AreasService: INVCOAreasService) { }
+
+  ngAfterViewInit() {
+    // If the user changes the sort order, reset back to the first page.
+    this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+
+    merge(this.sort.sortChange, this.paginator.page)
+      .pipe(
+        startWith({}),
+        switchMap(() => {
+          this.isLoadingResults = true;
+          let sortExpr = '';
+          if (this.sort.active) {
+            sortExpr = `${this.sort.active} ${this.sort.direction}`;
+          }
+          return this.INVCO_AreasService.getINVCO_AreasList(this.filter, this.paginator.pageSize, this.paginator.pageIndex, sortExpr);
+        }),
+        map(data => {
+          // Flip flag to show that loading has finished.
+          this.isLoadingResults = false;
+          this.isRateLimitReached = false;
+          this.resultsLength = data.rowsCount;
+
+          return data.rows;
+        }),
+        catchError(() => {
+          this.isLoadingResults = false;
+          // Catch if the API has reached its rate limit. Return empty data.
+          this.isRateLimitReached = true;
+          return observableOf([]);
+        })
+      ).subscribe(data => this.rows = data);
+  }
+
+  add(): void {
+    this.selectedRow = new INVCO_AreasModel();
+
+    this.openDialog();
+  }
+
+  edit(): void {
+    if (this.selectedRow) {
       this.openDialog();
     }
+  }
 
-    edit(): void {
-      if(this.selectedRow) {
-        this.openDialog();
+  refresh() {
+    this.ngAfterViewInit();
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(INVCO_Areas_Dialog, {
+      data: this.selectedRow
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        Object.assign(this.selectedRow, result.data);
+        if (this.selectedRow.estado === 'N') {
+          this.selectedRow.estado = 'C';
+          this.rows.push(this.selectedRow);
+          this.rows = [...this.rows];
+        }
       }
-    }
+    });
+  }
 
-    refresh() {
-      this.ngAfterViewInit();
-    }
+  onSelect(event, row: INVCO_AreasModel) {
+    this.selectedRow = row;
+    this.openDialog();
+  }
 
-    openDialog(): void {
-        const dialogRef = this.dialog.open(INVCO_Areas_Dialog, {
-          data: this.selectedRow
-        });
-        
-        dialogRef.afterClosed().subscribe(result => {
-          if (result) {
-            Object.assign(this.selectedRow, result.data);
-            if (this.selectedRow.estado === 'N') {
-              this.selectedRow.estado = 'C';
-              this.rows.push(this.selectedRow);
-              this.rows = [...this.rows];
-            } 
-          }  
-        });
-    }
+  onTotals(data: any) {
+    Object.assign(this.selectedRow, data);
+  }
 
-    onSelect(event, row: INVCO_AreasModel) {
-        this.selectedRow = row;
-        this.openDialog();
-    }
-    
-    onTotals(data: any) {
-        Object.assign(this.selectedRow, data);
-    }
+  applyFilter(e) {
+    this.filter.column = e;
+    this.filter.value = this.searchValue[e];
+    this.filter.condition = this.searchCondition[e];
 
-    applyFilter(e) {
-        let evt = new PageEvent();
-        evt.pageIndex = 1;
-        this.paginator.page.emit(evt);
-    }
+    let evt = new PageEvent();
+    evt.pageIndex = 1;
+    this.paginator.page.emit(evt);
+  }
 
-    clearColumn(e) { }
+  clearColumn(e) { }
 
-    exportCsv(e) { }
+  exportCsv(e) { }
 
 }

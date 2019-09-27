@@ -12,7 +12,7 @@ import { TECBOG_RolesModel } from './tecbog.roles.model';
 export const CONDITIONS_LIST = [
   { value: "contains({0})", label: "Contains" },
   { value: "!contains({0})", label: "Not Contains" },
-  { value: "=", label: "Is equal" },
+  { value: "==", label: "Is equal" },
   { value: "!=", label: "Is not equal" }
 ];
 
@@ -21,7 +21,7 @@ export const CONDITIONS_LIST_NUMBER = [
   { value: ">=", label: "Greater or Equal" },
   { value: "<", label: "Less Than" },
   { value: "<=", label: "Less or Equal" },
-  { value: "=", label: "Is equal" },
+  { value: "==", label: "Is equal" },
   { value: "!=", label: "Is not equal" }
 ];
 
@@ -35,7 +35,7 @@ export class TECBOG_Roles_Table implements AfterViewInit {
     rows: TECBOG_RolesModel[] = [];
     selectedRow: TECBOG_RolesModel;
     
-    public displayedColumns: string[] = ['tecbogRolesaplicacionCodigo', 'tecbogRolesCodigoRol', 'tecbogRolesRolNombre', 'tecbogRolesRolEstado', 'tecbogRolesAutorizaPlanilla', 'tecbogRolesFuncAutorizado', 'tecbogRolesSwAnulacion', 'tecbogRolesAutorizacionIngreso', 'tecbogRolesBloqueoIngreso', 'tecbogRolesCrearCliente', 'tecbogRolesHoraBloqueo', 'tecbogRolesMinutoBloqueo', 'tecbogRolesAdmonPortafolio', 'tecbogRolesSimulacion', 'tecbogRolesExtracto', 'tecbogRolesCrearInver', 'tecbogRolesCambioEmpresa', 'tecbogRolesPuedeFuturos', 'tecbogRolesAutorizacionAdmon', 'tecbogRolesValorEfectivo', 'tecbogRolesSaldoCajero', 'tecbogRolesCambioContrib', 'tecbogRolesTiempoEspera', 'tecbogRolesUsrInter', 'tecbogRolesAdmonInforme', 'tecbogRolesHoraIngreso', 'tecbogRolesTipoSeguridad', 'tecbogRolesModiComprobante', 'tecbogRolesRetFechCompro', 'tecbogRolesTipoHsystem', 'tecbogRolesDv11Menu', 'tecbogRolesAplicacion1', 'tecbogRolesAplicacion2', 'tecbogRolesAplicacion3', 'tecbogRolesAplicacion4', 'tecbogRolesAplicacion5', 'tecbogRolesAplicacion6', 'tecbogRolesAplicacion7', 'tecbogRolesPantalla', 'tecbogRolesBloqueoMovto', 'tecbogRolesConsultaSaldo', 'tecbogRolesIndEjecutivo', 'tecbogRolesTipoFirma', 'tecbogRolesCambioContabilidad', 'tecbogRolesSaldoMe', 'tecbogRolesEditaIdbAutomatico', 'tecbogRolesGeneraBitacora', 'tecbogRolesModificaParImptos', 'tecbogRolesModificaClientes', 'tecbogRolesAdministradorUsuarios', 'tecbogRolesCambioEdoPagoProv', 'tecbogRolesNivelCartera', 'tecbogRolesNivelDpf', 'tecbogRolesAdministraPuc', 'tecbogRolesAplicativo', 'tecbogRolesCrearUsuarios', 'tecbogRolesModiFecProgramda', 'tecbogRolesAsignaTitulo', 'tecbogRolesCambioSucTesoreria', 'tecbogRolesIndChequeras', 'tecbogRolesConsultaClientes', 'tecbogRolesParametrosCaja', 'tecbogRolesTransaccionesCaja', 'tecbogRolesEfecOperaTeso', 'tecbogRolesNroModificaciones', 'tecbogRolesSwEjecutaDepurador', 'tecbogRolesSwCodigosDepurador', 'tecbogRolesSwModifCuentas', 'tecbogRolesSwUsuarioDwh', 'tecbogRolesCambioSucAhorro', 'tecbogRolesCorreoElectronico', 'tecbogRolesNumeroCelular', 'tecbogRolesIndIngresoLibranza', 'tecbogRolesPerfilLibranza', 'tecbogRolesPerfilTableros', 'tecbogRolesIndModifParAhoSuc', 'tecbogRolesIndAutorizaCondManejo', 'tecbogRolesIndEliminaCondManejo', 'tecbogRolesIndModificaCondManejo', 'tecbogRolesIndParManejoFirmasSuc', 'tecbogRolesIndModFirmas', 'tecbogRolesIndAutFirmas', 'tecbogRolesIndInsertFirmas', 'tecbogRolesPerfilProvisionAtm', 'tecbogRolesCodigoEmpleado', 'tecbogRolesCodZona', 'tecbogRolesTipoAsesor', 'tecbogRolesAplicaIncentivos', 'tecbogRolesTipoFirmaTeso', 'tecbogRolesFechaModDato', 'tecbogRolesUsuarioModDat', 'tecbogRolesFechaModClave', 'tecbogRolesModalidadAsesor', 'tecbogRolesCdtsTesoreria', 'tecbogRolesIndSeguimientoUsuarios', 'tecbogRolesNoAutorImpresiones', 'tecbogRolesPerfilPqr', 'tecbogRolesProfileBaseDatos', 'tecbogRolesRolBaseDatos', 'tecbogRolesIndAdministrarUsuarios', 'tecbogRolesIndAdministrarRoles', 'tecbogRolesIndCrearUsuarios', 'tecbogRolesIndCrearRoles', 'tecbogRolesIndAdministrarAlertas', 'tecbogRolesIndTipoSegXTECBOGRolesModulo', 'tecbogRolesIndGeneraReportesGrales', 'tecbogRolesIndGeneraReportesLog', 'tecbogRolesMontoMaxOrdengiroCxp', 'tecbogRolesFiltroReportesCdts', 'tecbogRolesRolBaseDatosCaja', 'tecbogRolesTipoFirmaWfc', 'tecbogRolesNivelInformes', 'tecbogRolesIndAnalistaAprobacion', 'tecbogRolesIndCambioZona', 'tecbogRolesDiasPassword', 'tecbogRolesNivel', 'tecbogRolesHorario', 'tecbogRolesIndAdministraNominaAho', 'tecbogRolesUsuarioOficinaCxcCxp', 'tecbogRolesAutorAnulaChq', 'tecbogRolesAutReimpChq', 'tecbogRolesIndCierre', 'tecbogRolesIndAnalistaAprobacionActivo', 'tecbogRolesValorAsignacionInicial', 'tecbogRolesValorAsignacionFinal'];
+    public displayedColumns: string[] = ['tecbogRolesaplicacionCodigo', 'tecbogRolesCodigoRol', 'tecbogRolesRolNombre', 'tecbogRolesRolEstado'];
 
     public conditionsList = CONDITIONS_LIST;
     public conditionsListNumber = CONDITIONS_LIST_NUMBER;
@@ -75,7 +75,7 @@ export class TECBOG_Roles_Table implements AfterViewInit {
               if (this.sort.active) {
                 sortExpr = `${this.sort.active} ${this.sort.direction}`;
               }
-              return this.TECBOG_RolesService.getTECBOG_RolesList(this.filter, this.paginator.pageSize, this.paginator.pageIndex + 1, sortExpr);
+              return this.TECBOG_RolesService.getTECBOG_RolesList(this.filter, this.paginator.pageSize, this.paginator.pageIndex, sortExpr);
             }),
             map(data => {
               // Flip flag to show that loading has finished.

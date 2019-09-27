@@ -12,10 +12,6 @@ const httpOptions = {
   params: null,
   headers: new HttpHeaders({
     'Content-Type': 'application/json'  ,
-    'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-    'Access-Control-Allow-Origin': 'http://localhost:4200',
-    'Access-Control-Allow-Headers': ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization"],
-    'Access-Control-Allow-Credentials': ["true"],
     'username': '',
     'passord': ''
   })
